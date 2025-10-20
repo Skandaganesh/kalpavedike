@@ -1,0 +1,69 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 260" width="1920" height="260">
+<line x1="36" x2="1884" y1="232" y2="232" stroke="#7A0B10" stroke-width="5"/>
+  <defs>
+    <style>
+      .kn { font-family: "Noto Sans Kannada","Tunga","Nirmala UI",system-ui,-apple-system,"Segoe UI",sans-serif; }
+      .en { font-family: "Inter",system-ui,-apple-system,"Segoe UI",sans-serif; }
+    </style>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="1.5" stdDeviation="2" flood-opacity="0.25"/>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1920" height="260" fill="#fff"/>
+
+  <!-- Top mantra line -->
+  <g class="kn" font-size="20" font-weight="700" fill="#6d0810">
+  <text x="580" y="34" textAnchor="middle">
+  <tspan>॥ ಓಂ ಶ್ರೀ ಕದ್ರಿ ಮಂಜುನಾಥಾಯ ನಮ: ॥</tspan>
+  <tspan dx="150">॥ ಕಚೂರು ಶ್ರೀ ಮಾಲ್ತಿದೇವಿ ನಮ: ॥</tspan>
+</text>
+
+  </g>
+
+  <!-- Left circular logo--> 
+ 
+
+
+/<!-- Left circular logo (enlarged) -->
+<g transform="translate(70,10)">
+  <!-- Outer dark maroon ring -->
+  <circle cx="100" cy="100" r="100" fill="#7A0B10" filter="url(#shadow)"/>
+  <!-- White border -->
+  <circle cx="100" cy="100" r="93" fill="#fff" stroke="#7A0B10" stroke-width="6"/>
+
+  <!-- Clip path for clean circle crop -->
+  <clipPath id="clip">
+    <circle cx="100" cy="100" r="88"/>
+  </clipPath>
+
+  <!-- Embedded logo image -->
+  <image href="kalpa.jpg"
+         x="12"
+         y="12"
+         width="176"
+         height="176"
+         clip-path="url(#clip)"
+         preserveAspectRatio="xMidYMid slice" />
+</g>
+
+  <!-- Main title -->
+  <g class="kn" text-anchor="middle">
+    <!-- subtle white outline by layering -->
+    <text x="1010" y="120" font-size="60" font-weight="900" fill="#ffffff" stroke="#ffffff" stroke-width="20">ಶ್ರೀ ದೈವರಾಜ ಬಬ್ಬುಸ್ವಾಮಿ ಕಲ್ಪವೇದಿಕೆ</text>
+    <text x="1010" y="120" font-size="60" font-weight="900" fill="#b10c0f">ಶ್ರೀ ದೈವರಾಜ ಬಬ್ಬುಸ್ವಾಮಿ ಕಲ್ಪವೇದಿಕೆ</text>
+  </g>
+
+  <!-- Location line -->
+  <text class="kn" x="1010" y="182" font-size="26" font-weight="700" fill="#3b3b3b" text-anchor="middle">
+    ಬಲಿಪತೋಟ, ಭಾರತೀನಗರ, ಬಿಜೈ, ಮಂಗಳೂರು
+  </text>
+
+ 
+
+  <!-- Bottom triple rules -->
+  
+  <line x1="36" x2="1884" y1="242" y2="242" stroke="#7A0B10" stroke-width="5"/>
+ 
+</svg>
