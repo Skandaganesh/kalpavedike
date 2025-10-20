@@ -7,7 +7,7 @@ import { useSelector } from "react-redux";
 import { RootState } from "../store";
 import { usePathname } from "next/navigation";
 import Banner from "@/app/components/banner";
-import LanguageSwitcher from "@/app/components/LanguageSwitcher";
+
 
 interface NavLink {
   href: string;
