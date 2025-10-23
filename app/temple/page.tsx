@@ -23,26 +23,26 @@ const content: Record<
       { title: "Morning Puja", description: "8:00 AM - 8:15 AM" },
       { title: "Maha Puja", description: "12:00 PM - 12:15 PM" },
       { title: "Night Puja", description: "8 PM" },
-      { title: "Nearest Bus Stand", description: "Hariharapallattadaka" },
+      { title: "Nearest Bus Stand", description: "Balipathota, Bharathi Nagar" },
       {
         title: "Nearest Major Bus Stand",
-        description: "Kukke Subrahmanya (8 km)",
+        description: "KSRTC Bus stand, Bejai (1 km)",
       },
       {
         title: "Nearest Railway Station",
-        description: "Subrahmanya Road (21 km)",
+        description: "Mangalore Railway Station (4 km)",
       },
       {
         title: "Nearest Airport",
-        description: "Mangalore International Airport (117 km)",
+        description: "Mangalore International Airport (13 km)",
       },
     ],
   },
   kn: {
-    title: "ದೇವಸ್ಥಾನದ ಮಾಹಿತಿ",
+    title: "ದೈವಸ್ಥಾನದ ಮಾಹಿತಿ",
     details: [
       {
-        title: "ಶ್ರೀ ದೇವಸ್ಥಾನದ ಪೂಜಾ ಸಮಯ:",
+        title: "ದೈವಸ್ಥಾನದ ಪೂಜಾ ಸಮಯ:",
         description:
           "ದರ್ಶನ ಸಮಯ:\nಬೆಳಗ್ಗೆ 7 ಗಂಟೆಯಿಂದ ಮಧ್ಯಾಹ್ನ 1 ಗಂಟೆಯ ತನಕ | ಸಂಜೆ 5 ಗಂಟೆಯಿಂದ ರಾತ್ರಿ 8 ಗಂಟೆಯ ತನಕ",
       },
@@ -52,19 +52,19 @@ const content: Record<
       {
         title:
           "ಶ್ರೀ ದೈವರಾಜ ಬಬ್ಬುಸ್ವಾಮಿ ಕಲ್ಪವೇದಿಕೆಕ್ಕೆ ಹತ್ತಿರದಲ್ಲಿರುವ ಬಸ್ಸು ನಿಲ್ದಾಣ",
-        description: "ಹರಿಹರಪಲ್ಲತ್ತಡ್ಕ",
+        description: "KSRTC ಬಸ್ ನಿಲ್ದಾಣ, ಬಲಿಪತೋಟ, ಭಾರತಿ ನಗರ",
       },
       {
         title: "ಹತ್ತಿರದ ಪ್ರಮುಖ ಬಸ್ಸು ನಿಲ್ದಾಣ",
-        description: "ಕುಕ್ಕೆ ಸುಬ್ರಹ್ಮಣ್ಯ (8 ಕಿ.ಮಿ)",
+        description: "ಬಿಜೈ ಬಸ್ ನಿಲ್ದಾಣ (1 ಕಿ.ಮಿ)",
       },
       {
         title: "ಹತ್ತಿರದಲ್ಲಿರುವ ರೈಲು ನಿಲ್ದಾಣ",
-        description: "ಸುಬ್ರಹ್ಮಣ್ಯ ರೋಡ್ (21 ಕಿ.ಮಿ)",
+        description: "ಮಂಗಳೂರು ರೈಲು ನಿಲ್ದಾಣ (4 ಕಿ.ಮಿ)",
       },
       {
         title: "ಹತ್ತಿರದಲ್ಲಿರುವ ವಿಮಾನ ನಿಲ್ದಾಣ",
-        description: "ಮಂಗಳೂರು ಅಂತಾರಾಷ್ಟ್ರೀಯ ವಿಮಾನ ನಿಲ್ದಾಣ (117 ಕಿ.ಮಿ)",
+        description: "ಮಂಗಳೂರು ಅಂತಾರಾಷ್ಟ್ರೀಯ ವಿಮಾನ ನಿಲ್ದಾಣ (13 ಕಿ.ಮಿ)",
       },
     ],
   },

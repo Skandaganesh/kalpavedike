@@ -13,12 +13,12 @@ type LocaleType = "kn" | "en";
 
 const welcomeTitle: Record<LocaleType, string> = {
   en: "WELCOME TO SHRI Daivaraja babbuswamy kalpavedike",
-  kn: "ಶ್ರೀ ದೈವರಾಜ ಬಬ್ಬುಸ್ವಾಮಿ ಕಲ್ಪವೇದಿಕೆಕ್ಕೆ ಸ್ವಾಗತ",
+  kn: "ಶ್ರೀ ದೈವರಾಜ ಬಬ್ಬುಸ್ವಾಮಿ ಕಲ್ಪವೇದಿಕೆಗೆ ಸ್ವಾಗತ",
 };
 
 const welcomeContent: Record<LocaleType, string> = {
-  en: "Shri Daivaraja babbuswamy kalpavedike is a sacred Triveni Sangam Kshetra located at the foot of the Western Ghats in this Tulunadu of Parasurama creation in South India. Sullia is a rural taluk in Dakshina Kannada where most of the land is covered by forests and agriculture lands. Hariharapallathadka is one of the villages in this Sullia Taluk where Lord Harihareshwara resides.",
-  kn: "ಶ್ರೀ ದೈವರಾಜ ಬಬ್ಬುಸ್ವಾಮಿ ಕಲ್ಪವೇದಿಕೆವು ದಕ್ಷಿಣ ಭಾರತದ ಪಶ್ಚಿಮ ಘಟ್ಟದ ತಪ್ಪಲಿನಲ್ಲಿರುವ ಪರಶುರಾಮ ಸೃಷ್ಟಿಯ ತುಳುನಾಡಿನಲ್ಲಿರುವ ಒಂದು ಪುಣ್ಯ ತ್ರಿವೇಣಿ ಸಂಗಮ ಕ್ಷೇತ್ರ. ದಕ್ಷಿಣ ಕನ್ನಡ ಜಿಲ್ಲೆಯ ಗ್ರಾಮೀಣ ಭಾಗದ ಸುಳ್ಯ ತಾಲೂಕಿನ ಹರಿಹರಪಲ್ಲತ್ತಡ್ಕ ಎಂಬ ಗ್ರಾಮದಲ್ಲಿ ಶ್ರೀ ಹರಿಹರೇಶ್ವರ ದೇವರು ನೆಲೆಸಿದ್ದಾರೆ. ",
+  en: "Shri Daivaraja babbuswamy kalpavedike",
+  kn: "ಶ್ರೀ ದೈವರಾಜ ಬಬ್ಬುಸ್ವಾಮಿ ಕಲ್ಪವೇದಿಕೆ", 
 };
 
 export default function Component() {
@@ -42,8 +42,8 @@ export default function Component() {
       <SEOComponent
         title="Shri Daivaraja babbuswamy kalpavedike - A Sacred Destination for Devotees"
         description="Explore the Shri Daivaraja babbuswamy kalpavedike, a revered spiritual destination in Karnataka, dedicated to peace, devotion, and cultural heritage."
-        image="http://www.shriharihareshwara.org/logo.jpg"
-        url="http://www.shriharihareshwara.org/"
+        image="http://www.kalpavedike.vercel.app/logo.jpg"
+        url="http://www.kalpavedike.vercel.app/"
       />
 
       <main className="min-h-screen flex flex-col items-center p-4 sm:p-8 text-center">

@@ -42,9 +42,9 @@ const footerText: Record<
     addressTitle: "Address",
     address: [
       "Shri Daivaraja babbuswamy kalpavedike,",
-      "Hariharapallathadka Post and Village,",
-      "Sullia Taluk, Dakshina Kannada",
-      "PIN - 574218",
+      "Balipathotaa, Bharathinagar, bejai",
+      "Mangalore, Dakshina Kannada",
+      "PIN - 575004",
     ],
     contactNumbers: "08257-283366, 8073030594",
     email: "shriharihareshwara@gmail.com",
@@ -52,17 +52,17 @@ const footerText: Record<
     refundPolicy: " Refund & Cancellation",
     admin: " Admin",
     rightsReserved:
-      " Shri Daivaraja babbuswamy kalpavedike, Hariharapallathadka. All Rights Reserved",
+      " Shri Daivaraja babbuswamy kalpavedike, Balipathotaa. All Rights Reserved",
     designedBy: "Designed by:",
-    designerName: "ISCODERZ",
+    designerName: "*",
   },
   kn: {
     templeName: "ಶ್ರೀ ದೈವರಾಜ ಬಬ್ಬುಸ್ವಾಮಿ ಕಲ್ಪವೇದಿಕೆ",
     quickLinks: {
       title: "ಲಿಂಕ್ಸ್",
       links: [
-        // ದೇವಾಲಯದ ಬಗ್ಗೆ ಇತಿಹಾಸ
-        { name: "ದೇವಸ್ಥಾನದ ಬಗ್ಗೆ", path: "/history" },
+        // ದೈವಾಲಯದ ಬಗ್ಗೆ ಇತಿಹಾಸ
+        { name: "ದೈವಸ್ಥಾನದ ಬಗ್ಗೆ", path: "/history" },
         { name: "ಸುದ್ದಿಗಳು", path: "/newsupdates" },
         { name: "ಸೇವೆಗಳು", path: "/sevas" },
         { name: "ಗ್ಯಾಲರಿ", path: "/gallery" },
@@ -71,19 +71,19 @@ const footerText: Record<
     addressTitle: "ವಿಳಾಸ",
     address: [
       "ಶ್ರೀ ದೈವರಾಜ ಬಬ್ಬುಸ್ವಾಮಿ ಕಲ್ಪವೇದಿಕೆ,",
-      "ಹರಿಹರಪಲ್ಲತಡ್ಕ ಅಂಚೆ ಮತ್ತು ಗ್ರಾಮ,",
-      "ಸುಳ್ಯ ತಾಲೂಕು, ದ.ಕ.",
-      "ಪಿನ್ - 574218",
+      "ಬಲಿಪತೋಟ, ಭಾರತಿನಗರ, ಬಿಜೈ",
+      "ಮಂಗಳೂರು, ದ.ಕ.",
+      "ಪಿನ್ - 575004",
     ],
-    contactNumbers: "08257-283366, 8073030594",
-    email: "shriharihareshwara@gmail.com",
+    contactNumbers: "*",
+    email: "*@gmail.com",
     privacyPolicy: "ಗೌಪ್ಯತಾ ನೀತಿ",
     refundPolicy: " ಮರುಪಾವತಿ ಮತ್ತು ರದ್ದುಪಡಿಸುವಿಕೆ",
     admin: " ಅಡ್ಮಿನ್",
     rightsReserved:
-      "ಶ್ರೀ ದೈವರಾಜ ಬಬ್ಬುಸ್ವಾಮಿ ಕಲ್ಪವೇದಿಕೆ, ಹರಿಹರಪಲ್ಲತಡ್ಕ. ಎಲ್ಲಾ ಹಕ್ಕುಗಳನ್ನು ಕಾಯ್ದಿರಿಸಲಾಗಿದೆ",
+      "ಶ್ರೀ ದೈವರಾಜ ಬಬ್ಬುಸ್ವಾಮಿ ಕಲ್ಪವೇದಿಕೆ, ಬಲಿಪತೋಟ. ಎಲ್ಲಾ ಹಕ್ಕುಗಳನ್ನು ಕಾಯ್ದಿರಿಸಲಾಗಿದೆ",
     designedBy: "ಹೋಸ್ಟಿಂಗ್ ಮತ್ತು ನಿರ್ವಹಣೆ:",
-    designerName: "ಐಎಸ್ ಕೋಡರ್ಸ್",
+    designerName: "*",
   },
 };
 
@@ -101,7 +101,7 @@ const Footer: React.FC = () => {
           <div className="flex flex-col items-center lg:items-center mb-8 lg:mb-0">
             <div className="mb-8">
               <Image
-                src="/logo.jpg"
+                src="/c/kalpa.jpg"
                 alt="Temple Logo"
                 width={96}
                 height={96}
@@ -216,7 +216,7 @@ const Footer: React.FC = () => {
           <div className="flex justify-center lg:justify-end w-full lg:w-auto">
             <iframe
               title="Map Location"
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d16007.58945343131!2d75.5966208264565!3d12.621718820076161!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ba4e497c13f1aa5%3A0x5592ade3cc59cc91!2s!5e1!3m2!1sen!2sin!4v1730022730983!5m2!1sen!2sin"
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d16448.846181404646!2d74.82437238715819!3d12.883118199999997!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ba35b8b50e5e5cd%3A0x5476f8f0b993bfa9!2sKordabbu%20Daivasthana%20Balipathota!5e1!3m2!1sen!2sus!4v1761163369358!5m2!1sen!2sus"
               width="400"
               height="200"
               className="rounded-md shadow-lg"

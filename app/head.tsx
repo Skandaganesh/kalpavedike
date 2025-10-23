@@ -5,11 +5,11 @@ export default function Head() {
       <title>Shri Daivaraja babbuswamy kalpavedike</title>
       <meta
         name="description"
-        content="Explore the Shri Daivaraja babbuswamy kalpavedike, Hariharapallathadka, a revered spiritual destination for peace, devotion, and cultural heritage in Karnataka."
+        content="Explore the Shri Daivaraja babbuswamy kalpavedike, Balipathota, a revered spiritual destination for peace, devotion, and cultural heritage in Karnataka."
       />
       <meta
         name="keywords"
-        content="Shri Daivaraja babbuswamy kalpavedike, temple in Karnataka, religious site, Hariharapallathadka, pilgrimage, Hindu temple, Karnataka tourism"
+        content="Shri Daivaraja babbuswamy kalpavedike, temple in Karnataka, religious site, Balipathotaa, pilgrimage, Hindu temple, Karnataka tourism"
       />
 
       {/* Open Graph / Social Media Meta Tags */}
@@ -23,9 +23,9 @@ export default function Head() {
       />
       <meta
         property="og:image"
-        content="http://www.shriharihareshwara.org/logo.jpg"
+        content="http://www.kalpavedike.vercel.app/logo.jpg"
       />
-      <meta property="og:url" content="http://www.shriharihareshwara.org/" />
+      <meta property="og:url" content="http://www.kalpavedike.vercel.app/" />
       <meta property="og:type" content="website" />
 
       {/* Twitter Card Tags */}
@@ -40,7 +40,7 @@ export default function Head() {
       />
       <meta
         name="twitter:image"
-        content="http://www.shriharihareshwara.org/logo.jpg"
+        content="http://www.kalpavedike.vercel.app/logo.jpg"
       />
     </>
   );
