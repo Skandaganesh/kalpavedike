@@ -73,10 +73,10 @@ const SevasList = (): JSX.Element => {
   }
 
   return (
-    <div className="flex flex-col items-center min-h-screen p-6 bg-gradient-to-b from-white to-orange-100">
+    <div className="flex flex-col items-center min-h-screen p-6 bg-gradient-to-b from-white to-yellow-100">
       <p className="text-center text-sm font-bold text-red-500 mb-4 animate-pulse shadow-lg">
         {showKannada
-          ? "ದಯವಿಟ್ಟು ಸೇವೆಯನ್ನು ನಡೆಸುವ ದಿನಕ್ಕಿಂತ ಕನಿಷ್ಟ ಒಂದು ದಿನದ ಮುಂಚಿತವಾಗಿ ದೃಢೀಕರಣಕ್ಕಾಗಿ ದೇವಾಲಯದ ಕಚೇರಿಯನ್ನು ಸಂಪರ್ಕಿಸಿ."
+          ? "ದಯವಿಟ್ಟು ಸೇವೆಯನ್ನು ನಡೆಸುವ ದಿನಕ್ಕಿಂತ ಕನಿಷ್ಟ ಒಂದು ದಿನದ ಮುಂಚಿತವಾಗಿ ದೃಢೀಕರಣಕ್ಕಾಗಿ ದೈವಾಲಯದ ಕಚೇರಿಯನ್ನು ಸಂಪರ್ಕಿಸಿ."
           : "Please contact the temple office for confirmation regarding the seva at least one day prior to the day of worship."}
       </p>
       {error && <p className="text-red-500 text-center">{error}</p>}
@@ -89,7 +89,7 @@ const SevasList = (): JSX.Element => {
         {sevas.map((seva) => (
           <div
             key={seva.id}
-            className="p-6 bg-gradient-to-b from-white to-orange-100 rounded-lg shadow-lg transition-transform transform hover:scale-105 cursor-pointer text-center"
+            className="p-6 bg-gradient-to-b from-white to-yellow-100 rounded-lg shadow-lg transition-transform transform hover:scale-105 cursor-pointer text-center"
             onClick={() => handleSevaClick(seva)}
           >
             <h2 className="text-xl font-bold text-orange-600 mb-2">

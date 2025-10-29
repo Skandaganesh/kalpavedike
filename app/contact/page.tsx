@@ -27,22 +27,22 @@ const contactText: Record<
     contactDetails: "Contact Details",
     googleMap: "Google Map",
     address:
-      "Shri Daivaraja babbuswamy kalpavedike,\nHariharapallathadka Post and Village,\nSullia Taluk, Dakshina Kannada,\nPIN-574218",
-    phone: "Contact Number:+918073030594",
-    tele: "Telephone Number: 08257-283366",
-    president: "President: +919481321850",
-    email: "E-mail: shriharihareshwara@gmail.com",
+      "Shri Daivaraja babbuswamy kalpavedike,\nBalipathotaa,\nBharathinagar, bejai, \nMangalore PIN-575004",
+    phone: "Contact Number:+91",
+    tele: "Telephone Number: *",
+    president: "President: +91",
+    email: "E-mail: @gmail.com",
   },
   kn: {
-    postalAddress: "ದೇವಸ್ಥಾನದ ವಿಳಾಸ",
+    postalAddress: "ದೈವಸ್ಥಾನದ ವಿಳಾಸ",
     contactDetails: "ದೂರವಾಣಿ ಸಂಖ್ಯೆ",
     googleMap: "ಗೂಗಲ್ ಮ್ಯಾಪ್ ನಕ್ಷೆ",
     address:
-      "ಶ್ರೀ ದೈವರಾಜ ಬಬ್ಬುಸ್ವಾಮಿ ಕಲ್ಪವೇದಿಕೆ,\nಹರಿಹರಪಲ್ಲತಡ್ಕ ಅಂಚೆ ಮತ್ತು ಗ್ರಾಮ,\nಸುಳ್ಯ ತಾಲೂಕು, ದ.ಕ.,\nಪಿನ್-574218",
-    phone: "ಸಂಪರ್ಕ ಸಂಖ್ಯೆ: +919448116685, +918073030594",
-    tele: "ದೂರವಾಣಿ: 08257-283366",
-    president: "ಅಧ್ಯಕ್ಷರು: +919481321850",
-    email: "ಇ-ಮೇಲ್: shriharihareshwara@gmail.com",
+      "ಶ್ರೀ ದೈವರಾಜ ಬಬ್ಬುಸ್ವಾಮಿ ಕಲ್ಪವೇದಿಕೆ,\nಬಲಿಪತೋಟ,\nಭಾರತಿನಗರ, ಬಿಜೈ,\nಮಂಗಳೂರು ಪಿನ್-575004",
+    phone: "ಸಂಪರ್ಕ ಸಂಖ್ಯೆ: +91, +91",
+    tele: "ದೂರವಾಣಿ: *",
+    president: "ಅಧ್ಯಕ್ಷರು: +91",
+    email: "ಇ-ಮೇಲ್: @gmail.com",
   },
 };
 
@@ -104,8 +104,8 @@ const Contact: React.FC = () => {
             </h2>
             <div className="border border-gray-300 shadow-lg">
               <iframe
-                src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d14154.300532021494!2d75.6074572!3d12.618683!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ba4e497c13f1aa5%3A0x5592ade3cc59cc91!2sHarihareshwara%20Temple!5e1!3m2!1sen!2sin!4v1730361727124!5m2!1sen!2sin"
-                width="100%"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d16448.846181404646!2d74.82437238715819!3d12.883118199999997!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ba35b8b50e5e5cd%3A0x5476f8f0b993bfa9!2sKordabbu%20Daivasthana%20Balipathota!5e1!3m2!1sen!2sus!4v1761163369358!5m2!1sen!2sus"
+              width="100%"
                 height="450"
                 style={{ border: 0 }}
                 allowFullScreen={true}

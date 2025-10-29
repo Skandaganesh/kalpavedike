@@ -1,170 +1,110 @@
 "use client";
+
 import Image from "next/image";
-import { useState, useEffect } from "react";
-import Swal from "sweetalert2";
-import LoadingSpinner from "../components/LoadingSpinner";
-import ImageModal from "../components/ImageModal";
+import P1 from "/app/gallery/p1.jpg";
+import P2 from "/app/gallery/p2.jpg";
+import P3 from "/app/gallery/p3.jpg";
+import P4 from "/app/gallery/p4.jpg";
+import P5 from "/app/gallery/p5.jpg";
+import P6 from "/app/gallery/p6.jpg";
+import P7 from "/app/gallery/p7.jpg";
+import P8 from "/app/gallery/p8.jpg";
+import P9 from "/app/gallery/p9.jpg";
+import P10 from "/app/gallery/p10.jpg";
+import P11 from "/app/gallery/p11.jpg";
+import P12 from "/app/gallery/p12.jpg";
+import P13 from "/app/gallery/p13.jpg";
+import P14 from "/app/gallery/p14.jpg";
+import P15 from "/app/gallery/p15.jpg";
+import P16 from "/app/gallery/p16.jpg";
+import P17 from "/app/gallery/p17.jpg";
+import P18 from "/app/gallery/p18.jpg";
+import P19 from "/app/gallery/p19.jpg";
+import P20 from "/app/gallery/p20.jpg";
+import P21 from "/app/gallery/p21.jpg";
+import P22 from "/app/gallery/p22.jpg";
+import P23 from "/app/gallery/p23.jpg";
+import P24 from "/app/gallery/p24.jpg";
+import P25 from "/app/gallery/p25.jpg";
+import P26 from "/app/gallery/p26.jpg";
+import P27 from "/app/gallery/p27.jpg";
+import P28 from "/app/gallery/p28.jpg";
+import P29 from "/app/gallery/p29.jpg";
+import P30 from "/app/gallery/p30.jpg";
+import P31 from "/app/gallery/p31.jpg";
+import P32 from "/app/gallery/p32.jpg";
+import P33 from "/app/gallery/p33.jpg";
+import P34 from "/app/gallery/p34.jpg";
+import P35 from "/app/gallery/p35.jpg";
 
-interface GalleryImage {
-  image_id: number;
-  alt_text: string;
-  file_path: string;
-  public_url: string;
-}
-
-interface GalleryItem {
-  gallery_id: number;
-  title: string;
-  image_id: number; // Add this
-  Images: GalleryImage;
-}
-
-interface GalleryResponse {
-  statusCode: number;
-  message: string;
-  data: GalleryItem[];
-}
-
-interface ImageData {
-  image_id: number;
-  alt_text: string;
-  public_url: string;
-  title: string;
-}
-
-export default function Gallery(): JSX.Element {
-  const [images, setImages] = useState<ImageData[]>([]);
-  const [loading, setLoading] = useState(false);
-  const [isImageModalOpen, setIsImageModalOpen] = useState(false);
-  const [currentIndex, setCurrentIndex] = useState(0);
-
-  // Hardcoded YouTube videos
-  const videos = [
-    {
-      title:
-        "ಹರಿಹರ ಜಾತ್ರೆ 2024 |ಶ್ರೀ ಹರಿಹರೇಶ್ವರ ದೇವರ ನೃತ್ಯ ಬಲಿ| |Thidambu Nritham| |Shri Daivaraja babbuswamy kalpavedike|",
-      video_url:
-        "https://www.youtube.com/embed/nKGWrYaBm9o?si=Y5xDuv4J1BbYASpH",
-    },
-    {
-      title:
-        "Shri Daivaraja babbuswamy kalpavedike, Harihara | ಪ್ರತಿಷ್ಠಾ ವಾರ್ಷಿಕೋತ್ಸವ ಮತ್ತು ಜಾತ್ರೋತ್ಸವ | LIVE",
-      video_url:
-        "https://www.youtube.com/embed/aDmwh0ujr6Y?si=bdSh9OP6wXuF_shs",
-    },
+export default function Home() {
+  const photos = [
+    {src: P1,title: "ಅಭಿನಂದನಾ ಕಾರ್ಯಕ್ರಮ",},
+    {src: P2,title: "ಅಭಿನಂದನಾ ಕಾರ್ಯಕ್ರಮ",},
+    {src: P3,title: "ಅಭಿನಂದನಾ ಕಾರ್ಯಕ್ರಮ",},
+    {src: P4,title: "ಅಭಿನಂದನಾ ಕಾರ್ಯಕ್ರಮ",},
+    {src: P5,title: "ಅಭಿನಂದನಾ ಕಾರ್ಯಕ್ರಮ",},
+    {src: P6,title: "ಕೊರೋನಾ ಸಂದರ್ಭ ದೇವಸ್ಥಾನದ ವತಿಯಿಂದ ಗೌರವದನ ಕಿಟ್ ವಿತಾರಣೆ",},
+    {src: P7,title: "ಕೊರೋನಾ ಸಂದರ್ಭ ದೇವಸ್ಥಾನದ ವತಿಯಿಂದ ಗೌರವದನ ಕಿಟ್ ವಿತಾರಣೆ",},
+    {src: P8,title: "ಕೊರೋನಾ ಸಂದರ್ಭ ದೇವಸ್ಥಾನದ ವತಿಯಿಂದ ಗೌರವದನ ಕಿಟ್ ವಿತಾರಣೆ",},
+    {src: P9,title: "ಕೊರೋನಾ ಸಂದರ್ಭ ದೇವಸ್ಥಾನದ ವತಿಯಿಂದ ಗೌರವದನ ಕಿಟ್ ವಿತಾರಣೆ",},
+    {src: P10,title: "ಗಣೇಶನ ಚಿತ್ರ ಬಿಡಿಸುವ ಸ್ಪರ್ಧೆ 2020",},
+    {src: P11,title: "ಗಣೇಶನ ಚಿತ್ರ ಬಿಡಿಸುವ ಸ್ಪರ್ಧೆ 2020",},
+    {src: P12,title: "ಗಣೇಶನ ಚಿತ್ರ ಬಿಡಿಸುವ ಸ್ಪರ್ಧೆ 2020",},
+    {src: P13,title: "ಗಣೇಶನ ಚಿತ್ರ ಬಿಡಿಸುವ ಸ್ಪರ್ಧೆ 2020",}, 
+    {src: P14,title: "ಗಣೇಶನ ಚಿತ್ರ ಬಿಡಿಸುವ ಸ್ಪರ್ಧೆ 2023",},
+    {src: P15,title: "ಗಣೇಶನ ಚಿತ್ರ ಬಿಡಿಸುವ ಸ್ಪರ್ಧೆ 2023",},
+    {src: P16,title: "ಗಣೇಶನ ಚಿತ್ರ ಬಿಡಿಸುವ ಸ್ಪರ್ಧೆ 2024",},
+    {src: P17,title: "ಗಣೇಶನ ಚಿತ್ರ ಬಿಡಿಸುವ ಸ್ಪರ್ಧೆ 2024",},
+    {src: P18,title: "ಗಣೇಶನ ಚಿತ್ರ ಬಿಡಿಸುವ ಸ್ಪರ್ಧೆ 2024",},
+    {src: P19,title: "ಪುಸ್ತಕ ವಿತರಣಾ ಕಾರ್ಯಕ್ರಮ 2024",},
+    {src: P20,title: "ಪುಸ್ತಕ ವಿತರಣಾ ಕಾರ್ಯಕ್ರಮ 2024",},
+    {src: P21,title: "ಪುಸ್ತಕ ವಿತರಣಾ ಕಾರ್ಯಕ್ರಮ 2024",},
+    {src: P22,title: "ಪುಸ್ತಕ ವಿತರಣಾ ಕಾರ್ಯಕ್ರಮ 2024",},
+    {src: P23,title: "ಪುಸ್ತಕ ವಿತರಣಾ ಕಾರ್ಯಕ್ರಮ 2020",},
+    {src: P24,title: "ಪುಸ್ತಕ ವಿತರಣಾ ಕಾರ್ಯಕ್ರಮ 2020",},
+    {src: P25,title: "ಪುಸ್ತಕ ವಿತರಣಾ ಕಾರ್ಯಕ್ರಮ 2020",},
+    {src: P26,title: "ಪುಸ್ತಕ ವಿತರಣಾ ಕಾರ್ಯಕ್ರಮ 2023",},
+    {src: P27,title: "ಪುಸ್ತಕ ವಿತರಣಾ ಕಾರ್ಯಕ್ರಮ 2023",},
+    {src: P28,title: "ಪುಸ್ತಕ ವಿತರಣಾ ಕಾರ್ಯಕ್ರಮ 2023",},
+    {src: P29,title: "ಪುಸ್ತಕ ವಿತರಣಾ ಕಾರ್ಯಕ್ರಮ 2023",}, 
+    {src: P30,title: "ಪ್ರಥಮ ಪಿಯುಸಿ ಅತ್ಯಧಿಕ ಅಂಕಗಳಿಸಿದ ವಿದ್ಯಾರ್ಥಿಗಳಿಗೆ ಸನ್ಮಾನ",},
+    {src: P31,title: "ಯೋಗ ಶಿಬಿರ",},
+    {src: P32,title: "ಯೋಗ ಶಿಬಿರ",},
+    {src: P33,title: "ಯೋಗ ಶಿಬಿರ",},
+    {src: P34,title: "ವೈದ್ಯರಿಗೆ ಸನ್ಮಾನ ಡಾಕ್ಟರ್ ಟಿ ಆರ್ ರಾವ್",},
+    {src: P35,title: "ಸನ್ಮಾನ ಕಾರ್ಯಕ್ರಮ",},
   ];
 
-  const fetchGalleryData = async (): Promise<void> => {
-    setLoading(true);
-    try {
-      const res = await fetch(`/api/h1/gallery`, { cache: "no-store" });
-      if (!res.ok) throw new Error("Failed to fetch gallery data");
-      const data: GalleryResponse = await res.json();
-
-      const newImages: ImageData[] = data.data.map((galleryItem) => ({
-        image_id: galleryItem.Images?.image_id || galleryItem.image_id,
-        alt_text: galleryItem.Images?.alt_text || "No description available",
-        public_url: galleryItem.Images?.public_url || "",
-        title: galleryItem.title,
-      }));
-
-      setImages(newImages);
-    } catch (error) {
-      console.error(error);
-      Swal.fire({
-        text: "Failed to load gallery data. Please try again.",
-        icon: "error",
-        confirmButtonText: "Retry",
-      }).then(() => location.reload());
-    } finally {
-      setLoading(false);
-    }
-  };
-
-  useEffect(() => {
-    fetchGalleryData();
-  }, []);
-
-  const openImageModal = (index: number) => {
-    setCurrentIndex(index);
-    setIsImageModalOpen(true);
-  };
-
-  const closeImageModal = () => {
-    setIsImageModalOpen(false);
-  };
-
-  const navigateImage = (direction: "next" | "prev") => {
-    if (direction === "next" && currentIndex < images.length - 1) {
-      setCurrentIndex((prevIndex) => prevIndex + 1);
-    } else if (direction === "prev" && currentIndex > 0) {
-      setCurrentIndex((prevIndex) => prevIndex - 1);
-    }
-  };
-
   return (
-    <div className="relative px-4 md:px-8 lg:px-16 mb-10 bg-yellow-100">
-      {loading && <LoadingSpinner />}
+    <main className="min-h-screen bg-gray-50 py-10 px-6">
+      <h1 className="text-3xl font-bold text-center mb-8 text-gray-800">
+        Photo Gallery
+      </h1>
 
-      <div className="text-center mb-4">
-        <h1 className="text-3xl font-bold text-green-800">
-          Shri Daivaraja babbuswamy kalpavedike
-        </h1>
-      </div>
-
-      <h2 className="text-xl font-semibold mb-4 text-green-700">PHOTOS</h2>
-      {images.length > 0 ? (
-        <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4">
-          {images.map((image, index) => (
-            <div
-              key={image.image_id}
-              className="relative w-full h-48 cursor-pointer overflow-hidden group bg-white rounded-lg shadow-lg transition-shadow duration-300 hover:shadow-xl"
-              onClick={() => openImageModal(index)}
-            >
-              <Image
-                src={image.public_url}
-                alt={image.alt_text}
-                fill
-                loading="lazy"
-                className="object-cover rounded-lg transition-transform duration-300 hover:scale-105"
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+        {photos.map((photo, index) => (
+          <div
+            key={index}
+            className="relative group overflow-hidden rounded-2xl shadow-md"
+          >
+            {/* Photo */}
+            <Image
+                src={photo.src}
+                alt={photo.title}
+                width={400}
+                height={300}
+                className="object-contain w-full h-64 bg-gray-200"
+                priority
               />
-              <div className="absolute inset-0 flex items-center justify-center bg-black bg-opacity-50 opacity-0 transition-opacity duration-300 group-hover:opacity-100 rounded-lg">
-                <p className="text-white text-lg font-semibold">
-                  {image.title}
-                </p>
-              </div>
+
+            {/* Hover Overlay */}
+            <div className="absolute inset-0 bg-black bg-opacity-60 opacity-0 group-hover:opacity-100 transition duration-500 flex flex-col justify-center items-center text-center text-white p-4">
+              <h3 className="text-lg font-semibold mb-2">{photo.title}</h3>
             </div>
-          ))}
-        </div>
-      ) : (
-        <div className="text-center text-gray-600 text-lg">
-          No images found. Please check back later.
-        </div>
-      )}
-
-      <ImageModal
-        isOpen={isImageModalOpen}
-        images={images}
-        currentIndex={currentIndex}
-        onClose={closeImageModal}
-        onNavigate={navigateImage}
-      />
-
-      <h2 className="text-xl font-semibold mt-10 mb-4">VIDEOS</h2>
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 mt-6">
-        {videos.map((video, index) => (
-          <div key={index} className="w-full h-64">
-            <iframe
-              src={video.video_url}
-              title={video.title}
-              className="w-full h-full"
-              frameBorder="0"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-              allowFullScreen
-            ></iframe>
           </div>
         ))}
       </div>
-    </div>
+    </main>
   );
 }

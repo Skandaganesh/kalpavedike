@@ -181,7 +181,7 @@ export default function SevaForms(): JSX.Element {
         {filteredSevaForms.map((form) => (
           <div
             key={form.id}
-            className="bg-white border-l-4 border-orange-500 shadow-lg rounded-lg p-6 transition duration-300 transform hover:scale-105 flex flex-col justify-between max-w-xs mx-auto"
+            className="bg-white border-l-4 border-yellow-500 shadow-lg rounded-lg p-6 transition duration-300 transform hover:scale-105 flex flex-col justify-between max-w-xs mx-auto"
           >
             <h2 className="text-xl font-semibold text-orange-600 mb-2">
               {form.name}

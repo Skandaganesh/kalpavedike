@@ -53,12 +53,12 @@ const DonationsPage: React.FC = () => {
   const text = donationText[currentLocale];
 
   return (
-    <div className="flex flex-col items-center justify-center min-h-screen p-4 bg-gradient-to-b from-white to-orange-100">
+    <div className="flex flex-col items-center justify-center min-h-screen p-4 bg-gradient-to-b from-white to-yellow-100">
       <h1 className="mb-8 text-3xl font-bold text-orange-600">{text.title}</h1>
 
       <div className="grid grid-cols-1 gap-8 md:grid-cols-2 max-w-4xl w-full">
         {/* Box 1: General Donation */}
-        <div className="p-6 bg-gradient-to-b from-white to-orange-100 rounded-lg shadow-md text-center">
+        <div className="p-6 bg-gradient-to-b from-white to-yellow-100 rounded-lg shadow-md text-center">
           <h2 className="text-xl font-bold text-orange-600 mb-2">
             {text.generalDonation}
           </h2>
@@ -73,7 +73,7 @@ const DonationsPage: React.FC = () => {
         </div>
 
         {/* Box 2: Donation for Annadana */}
-        <div className="p-6 bg-gradient-to-b from-white to-orange-100 rounded-lg shadow-md text-center">
+        <div className="p-6 bg-gradient-to-b from-white to-yellow-100 rounded-lg shadow-md text-center">
           <h2 className="text-xl font-bold text-orange-600 mb-2">
             {text.annadanaDonation}
           </h2>

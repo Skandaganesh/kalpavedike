@@ -1,85 +1,96 @@
 "use client";
 
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { RootState, AppDispatch } from "../store";
 import { changeLocale } from "../store/localeSlice";
+import Image from "next/image";
+import P1 from "/app/administration/p1.jpg";
+import P2 from "/app/administration/p2.jpg";
+import P3 from "/app/administration/p3.jpg";
+import P4 from "/app/administration/p4.jpg";
+import P5 from "/app/administration/p5.jpg";
+
 
 type LocaleType = "kn" | "en";
+type ImageType = typeof P1;
 
-interface AdministrationContent {
-  managementPresidentTitle: string;
-  managementPresidentName: string;
-  contactNumber: string;
-  developmentPresidentTitle: string;
-  developmentPresidentName: string;
-  membersTitle: string;
-  members: string[];
-  templePriestTitle: string;
-  templePriestName: string;
-  AssistantPriestTitle: string;
-  AssistantPriestName: string;
-  OfficeClerkTitle: string;
-  OfficeClerkName: string;
-}
-
-// Content in both English and Kannada
-const administrationContent: Record<LocaleType, AdministrationContent> = {
+const placesContent: Record<
+  LocaleType,
+  {
+    title: string;
+    places: { name: string; description: string; image: ImageType }[];
+  }
+> = {
   en: {
-    managementPresidentTitle: "Management Committee President:",
-    managementPresidentName: "Shri Kishor Kumar Kujugodu",
-    contactNumber: "Contact no: +91 94813 21850",
-    developmentPresidentTitle: "Development Committee President:",
-    developmentPresidentName: "Shri Sheshappa Gowda Kiribhaga",
-    membersTitle: "Management Committee Members",
-    members: [
-      "Shri Chandrahasa S. Shivala",
-      "Shri Chandrashekhara K.K Kiribhaga",
-      "Shri Sharath D.S Kajjodi",
-      "Smt. Reshma Kattemane",
-      "Shri Bhavanishankara P. Pailaje",
-      "Smt. Jyothi K.L Kalige",
-      "Shri Ananda K. Kerekkodi",
+    title: "Management Committee",
+    places: [
+      {
+        name: "President",
+        description: "Ravichandra",
+        image: P1,
+      },
+      {
+        name: "Vice President",
+        description: "Dhananjaya",
+        image: P2,
+      },
+      {
+        name: "Vice President",
+        description: "Praveen",
+        image: P3,
+      },
+      {
+        name: "Principal Secretary",
+        description: "Shailesh",
+        image: P4,
+      },
+      {
+        name: "Treasurer",
+        description: "lolakshi",
+        image: P5,
+      },
     ],
-    templePriestTitle: "Temple Priest:",
-    templePriestName: "Shri Subrahmanya Narasimha Bhat",
-    AssistantPriestTitle: "Assistant Priest:",
-    AssistantPriestName: "Shri B. KrishnaKumara",
-    OfficeClerkTitle: "Office Clerk",
-    OfficeClerkName: "Shri Lokanatha.K",
   },
   kn: {
-    managementPresidentTitle: "ವ್ಯವಸ್ಥಾಪನ ಸಮಿತಿ ಅಧ್ಯಕ್ಷರು:",
-    managementPresidentName: "ಶ್ರೀ ಕಿಶೋರ್ ಕುಮಾರ್ ಕೂಜುಗೋಡು",
-    contactNumber: "ದೂರವಾಣಿ ಸಂ: +91 94813 21850",
-    developmentPresidentTitle: "ಅಭಿವೃದ್ಧಿ ಸಮಿತಿ ಅಧ್ಯಕ್ಷರು:",
-    developmentPresidentName: "ಶ್ರೀ ಶೇಷಪ್ಪ ಗೌಡ ಕಿರಿಭಾಗ",
-    membersTitle: "ಸದಸ್ಯರು",
-    members: [
-      "ಶ್ರೀ ಚಂದ್ರಹಾಸ ಎಸ್. ಶಿವಾಲ",
-      "ಶ್ರೀ ಚಂದ್ರಶೇಖರ ಕೆ. ಕೆ. ಕಿರಿಭಾಗ",
-      "ಶ್ರೀ ಶರತ್ ಡಿ. ಎಸ್. ಕಜ್ಜೋಡಿ",
-      "ಶ್ರೀಮತಿ ರೇಷ್ಮಾ ಕಟ್ಟೆಮನೆ",
-      "ಶ್ರೀ ಭವಾನಿಶಂಕರ ಪಿ. ಪೈಲಾಜೆ",
-      "ಶ್ರೀಮತಿ ಜ್ಯೋತಿ ಕೆ. ಎಲ್ ಕಳಿಗೆ",
-      "ಶ್ರೀ ಆನಂದ ಕೆ. ಕೆರೆಕ್ಕೋಡಿ",
+    title: "ವ್ಯವಸ್ಥಾಪನ ಸಮಿತಿ",
+    places: [
+      {
+        name: "ಅಧ್ಯಕ್ಷರು",
+        description: "ರವಿಚಂದ್ರ",
+        image: P1,
+      },
+      {
+        name: "ಉಪಾಧ್ಯಕ್ಷರು",
+        description: "ಧನಂಜಯ",
+        image: P2,
+      },
+      {
+        name: "ಉಪಾಧ್ಯಕ್ಷರು",
+        description: "ಪ್ರವೀಣ್",
+        image: P3,
+      },
+      {
+        name: "ಪ್ರಧಾನ ಕಾರ್ಯದರ್ಶಿ",
+        description: "ಶೈಲೇಶ್",
+        image: P4,
+      },
+      {
+        name: "ಕೋಶಾಧಿಕಾರಿ",
+        description: "ಲೋಲಾಕ್ಷಿ",
+        image: P5,
+      },
     ],
-    templePriestTitle: "ಅರ್ಚಕರು:",
-    templePriestName: "ಶ್ರೀ ಸುಬ್ರಹ್ಮಣ್ಯ ನರಸಿಂಹ ಭಟ್",
-    AssistantPriestTitle: "ಸಹಾಯಕ ಅರ್ಚಕರು:",
-    AssistantPriestName: "ಶ್ರೀ ಬಿ. ಕೃಷ್ಣಕುಮಾರ",
-    OfficeClerkTitle: "ಕಚೇರಿ ಗುಮಾಸ್ತರು",
-    OfficeClerkName: "ಶ್ರೀ ಲೋಕನಾಥ.ಕೆ",
   },
 };
 
-const Administration: React.FC = () => {
+export default function Nearby_Places() {
   const dispatch = useDispatch<AppDispatch>();
   const currentLocale: LocaleType = useSelector(
     (state: RootState) => state.locale.locale
   ) as LocaleType;
 
-  const content = administrationContent[currentLocale];
+  const { title, places } = placesContent[currentLocale];
   const [isLocaleLoaded, setIsLocaleLoaded] = useState(false);
 
   useEffect(() => {
@@ -88,112 +99,54 @@ const Administration: React.FC = () => {
     setIsLocaleLoaded(true);
   }, [dispatch]);
 
-  if (!isLocaleLoaded) return null; // Prevent rendering until locale is loaded
+  if (!isLocaleLoaded) return null;
 
   return (
-    <div
-      style={{
-        backgroundColor: "#f9f7e6",
-        padding: "20px",
-        textAlign: "center",
-        fontFamily: "Arial, sans-serif",
-      }}
-    >
-      {/* Management Committee President */}
-      <div style={{ marginBottom: "40px" }}>
-        <h3 style={{ color: "red", fontWeight: "bold", marginBottom: "5px" }}>
-          {content.managementPresidentTitle}
-        </h3>
-        <p style={{ fontWeight: "bold", marginBottom: "5px" }}>
-          {content.managementPresidentName}
-        </p>
-        <p>{content.contactNumber}</p>
-        <hr
-          style={{
-            width: "50%",
-            margin: "10px auto",
-            border: "0.5px solid #ccc",
-          }}
-        />
-      </div>
+    <main className="min-h-screen flex flex-col items-center p-6 bg-gradient-to-b from-white to-[#f3da5a] font-serif">
+      <h1 className="text-3xl font-bold mb-8 text-center text-black">{title}</h1>
 
-      {/* Development Committee President */}
-      <div style={{ marginBottom: "40px" }}>
-        <h3 style={{ color: "red", fontWeight: "bold", marginBottom: "5px" }}>
-          {content.developmentPresidentTitle}
-        </h3>
-        <p style={{ fontWeight: "bold", marginBottom: "5px" }}>
-          {content.developmentPresidentName}
-        </p>
-      </div>
-
-      {/* Members Section */}
-      <h3 style={{ color: "red", fontWeight: "bold", marginBottom: "20px" }}>
-        {content.membersTitle}
-      </h3>
-      <div
-        style={{
-          display: "flex",
-          justifyContent: "center",
-          flexWrap: "wrap",
-          gap: "40px",
-          maxWidth: "800px",
-          margin: "0 auto",
-        }}
-      >
-        <div
-          style={{
-            display: "flex",
-            flexDirection: "column",
-            alignItems: "flex-start",
-          }}
-        >
-          {content.members
-            .slice(0, Math.ceil(content.members.length / 2))
-            .map((member: string, index: number) => (
-              <div key={index} style={{ marginBottom: "15px" }}>
-                <p style={{ fontWeight: "bold" }}>{member}</p>
-              </div>
-            ))}
+      <div className="flex flex-col items-center space-y-8">
+        {/* Top Row - 1 image */}
+        <div className="flex justify-center">
+          <PlaceCard {...places[0]} />
         </div>
-        <div
-          style={{
-            display: "flex",
-            flexDirection: "column",
-            alignItems: "flex-start",
-          }}
-        >
-          {content.members
-            .slice(Math.ceil(content.members.length / 2))
-            .map((member: string, index: number) => (
-              <div key={index} style={{ marginBottom: "15px" }}>
-                <p style={{ fontWeight: "bold" }}>{member}</p>
-              </div>
-            ))}
+
+        {/* Second Row - 2 images */}
+        <div className="flex justify-center space-x-6">
+          <PlaceCard {...places[1]} />
+          <PlaceCard {...places[2]} />
+        </div>
+
+        {/* Third Row - 2 images */}
+        <div className="flex justify-center space-x-6">
+          <PlaceCard {...places[3]} />
+          <PlaceCard {...places[4]} />
         </div>
       </div>
+    </main>
+  );
+}
 
-      {/* Temple Priest Section */}
-      <div style={{ margin: "40px 0" }}>
-        <h3 style={{ color: "red", fontWeight: "bold", marginBottom: "5px" }}>
-          {content.templePriestTitle}
-        </h3>
-        <p style={{ fontWeight: "bold" }}>{content.templePriestName}</p>
-      </div>
-      <div style={{ margin: "40px 0" }}>
-        <h3 style={{ color: "red", fontWeight: "bold", marginBottom: "5px" }}>
-          {content.AssistantPriestTitle}
-        </h3>
-        <p style={{ fontWeight: "bold" }}>{content.AssistantPriestName}</p>
-      </div>
-      <div style={{ margin: "40px 0" }}>
-        <h3 style={{ color: "red", fontWeight: "bold", marginBottom: "5px" }}>
-          {content.OfficeClerkTitle}
-        </h3>
-        <p style={{ fontWeight: "bold" }}>{content.OfficeClerkName}</p>
-      </div>
+function PlaceCard({
+  name,
+  description,
+  image,
+}: {
+  name: string;
+  description: string;
+  image: ImageType;
+}) {
+  return (
+    <div className="bg-white rounded-xl shadow-lg p-4 flex flex-col items-center hover:scale-105 transition-transform duration-300">
+      <Image
+        src={image}
+        alt={name}
+        className="rounded-lg object-contain"
+        width={250}
+        height={180}
+      />
+      <h2 className="text-orange-600 font-semibold text-lg mt-3">{name}</h2>
+      <p className="text-gray-600 text-sm mt-1">{description}</p>
     </div>
   );
-};
-
-export default Administration;
+}

@@ -73,7 +73,7 @@ const AdminPage = () => {
               </div>
             </Link>
             <Link href="/admin/news-updates">
-              <div className="flex flex-col items-center bg-yellow-500 text-white rounded-lg p-6 h-40 w-full sm:w-40 text-center cursor-pointer transition duration-200 hover:bg-yellow-600">
+              <div className="flex flex-col items-center bg-orange-500 text-white rounded-lg p-6 h-40 w-full sm:w-40 text-center cursor-pointer transition duration-200 hover:bg-orange-600">
                 <CountAnimation count={newsUpdatesCount} />
                 <span className="text-lg font-bold">News Updates</span>
               </div>

@@ -105,7 +105,7 @@ const SevaForm: React.FC<SevaFormProps> = ({ seva, showKannada }) => {
 
         setConfirmation({
           message: showKannada
-            ? "ಸೇವಾ ಅರ್ಜಿಯನ್ನು ಯಶಸ್ವಿಯಾಗಿ ಸಲ್ಲಿಸಲಾಗಿದೆ! ದಯವಿಟ್ಟು ಈ ID ಅನ್ನು ದೇವಸ್ಥಾನದಲ್ಲಿ ತೋರಿಸಿ."
+            ? "ಸೇವಾ ಅರ್ಜಿಯನ್ನು ಯಶಸ್ವಿಯಾಗಿ ಸಲ್ಲಿಸಲಾಗಿದೆ! ದಯವಿಟ್ಟು ಈ ID ಅನ್ನು ದೈವಸ್ಥಾನದಲ್ಲಿ ತೋರಿಸಿ."
             : "Seva form submitted successfully! Please show this ID at the temple to perform your Seva.",
           bookingId: data.data.id,
           type: 'success',
@@ -169,7 +169,7 @@ const SevaForm: React.FC<SevaFormProps> = ({ seva, showKannada }) => {
             value={name}
             onChange={(e) => setName(e.target.value)}
             required
-            className="border border-gray-300 rounded-md p-2 w-full focus:outline-none focus:ring-2 focus:ring-orange-400"
+            className="border border-gray-300 rounded-md p-2 w-full focus:outline-none focus:ring-2 focus:ring-yellow-400"
           />
         </div>
 
@@ -183,7 +183,7 @@ const SevaForm: React.FC<SevaFormProps> = ({ seva, showKannada }) => {
             value={nakshathra}
             onChange={(e) => setNakshathra(e.target.value)}
             required
-            className="border border-gray-300 rounded-md p-2 w-full focus:outline-none focus:ring-2 focus:ring-orange-400"
+            className="border border-gray-300 rounded-md p-2 w-full focus:outline-none focus:ring-2 focus:ring-yellow-400"
           />
         </div>
 
@@ -197,7 +197,7 @@ const SevaForm: React.FC<SevaFormProps> = ({ seva, showKannada }) => {
             value={rashi}
             onChange={(e) => setRashi(e.target.value)}
             required
-            className="border border-gray-300 rounded-md p-2 w-full focus:outline-none focus:ring-2 focus:ring-orange-400"
+            className="border border-gray-300 rounded-md p-2 w-full focus:outline-none focus:ring-2 focus:ring-yellow-400"
           />
         </div>
 
@@ -210,7 +210,7 @@ const SevaForm: React.FC<SevaFormProps> = ({ seva, showKannada }) => {
             id="gotra"
             value={gotra}
             onChange={(e) => setGotra(e.target.value)}
-            className="border border-gray-300 rounded-md p-2 w-full focus:outline-none focus:ring-2 focus:ring-orange-400"
+            className="border border-gray-300 rounded-md p-2 w-full focus:outline-none focus:ring-2 focus:ring-yellow-400"
           />
         </div>
 
@@ -225,7 +225,7 @@ const SevaForm: React.FC<SevaFormProps> = ({ seva, showKannada }) => {
             value={mobileNumber}
             onChange={(e) => setMobileNumber(e.target.value)}
             required
-            className="border border-gray-300 rounded-md p-2 w-full focus:outline-none focus:ring-2 focus:ring-orange-400"
+            className="border border-gray-300 rounded-md p-2 w-full focus:outline-none focus:ring-2 focus:ring-yellow-400"
           />
           {phoneError && <p className="text-red-600 mt-1">{phoneError}</p>}
         </div>
@@ -241,7 +241,7 @@ const SevaForm: React.FC<SevaFormProps> = ({ seva, showKannada }) => {
             value={mobileNumberConfirmation}
             onChange={(e) => setMobileNumberConfirmation(e.target.value)}
             required
-            className="border border-gray-300 rounded-md p-2 w-full focus:outline-none focus:ring-2 focus:ring-orange-400"
+            className="border border-gray-300 rounded-md p-2 w-full focus:outline-none focus:ring-2 focus:ring-yellow-400"
           />
           {confirmationPhoneError && <p className="text-red-600 mt-1">{confirmationPhoneError}</p>}
         </div>
@@ -258,13 +258,13 @@ const SevaForm: React.FC<SevaFormProps> = ({ seva, showKannada }) => {
           required
           min={todayString} 
           max={maxDate} // Set the maximum date
-          className="border border-gray-300 rounded-md p-2 w-full focus:outline-none focus:ring-2 focus:ring-orange-400"
+          className="border border-gray-300 rounded-md p-2 w-full focus:outline-none focus:ring-2 focus:ring-yellow-400"
         />
       </div>
 
         <button
           type="submit"
-          className="bg-orange-600 text-white py-2 rounded-md shadow hover:bg-orange-700 transition w-full"
+          className="bg-yellow-600 text-white py-2 rounded-md shadow hover:bg-yellow-700 transition w-full"
           disabled={loading}
         >
           {loading ? 'Submitting...' : labels.submit}

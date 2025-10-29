@@ -95,7 +95,7 @@ const Footer: React.FC = () => {
 
   return (
     <div className="flex flex-col ">
-      <footer className="bg-gradient-to-r from-orange-500 to-orange-300 text-white py-10 px-10 md:px-10 lg:px-10 mt-[6rem] flex-grow">
+      <footer className="bg-gradient-to-r from-yellow-500 to-yellow-400 text-white py-10 px-10 md:px-10 lg:px-10 mt-[6rem] flex-grow">
         <div className="container mx-auto flex flex-col lg:flex-row justify-between lg:items-center">
           {/* Logo and Title Section */}
           <div className="flex flex-col items-center lg:items-center mb-8 lg:mb-0">
@@ -159,7 +159,7 @@ const Footer: React.FC = () => {
                 <li key={index}>
                   <Link
                     href={link.path}
-                    className="hover:underline hover:text-yellow-300 flex items-center"
+                    className="hover:underline hover:text-orange-300 flex items-center"
                   >
                     <span className="inline-block w-4">
                       <span className="text-xs leading-4">►</span>
@@ -231,15 +231,15 @@ const Footer: React.FC = () => {
       <div className="bg-black text-white py-2 text-center site-footer-bottom mx-0 mb-0">
         <p>
           © 2025 | Disclaimer -{" "}
-          <Link href="/policy" className="text-yellow-400 hover:underline">
+          <Link href="/policy" className="text-orange-400 hover:underline">
             {text.privacyPolicy}
           </Link>{" "}
           |
-          <Link href="/policy" className="text-yellow-400 hover:underline">
+          <Link href="/policy" className="text-orange-400 hover:underline">
             {text.refundPolicy}
           </Link>{" "}
           |
-          <Link href="/admin" className="text-yellow-400 hover:underline">
+          <Link href="/admin" className="text-orange-400 hover:underline">
             {text.admin}
           </Link>{" "}
           | {text.rightsReserved}
@@ -248,7 +248,7 @@ const Footer: React.FC = () => {
           {text.designedBy}{" "}
           <Link
             href="https://www.instagram.com/isdc.sahyadri/"
-            className="text-yellow-400 hover:underline"
+            className="text-orange-400 hover:underline"
           >
             {text.designerName}
           </Link>

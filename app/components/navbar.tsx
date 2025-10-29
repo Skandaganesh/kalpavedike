@@ -19,17 +19,15 @@ const navLinks: NavLink[] = [
   { href: "/", label: { en: "Home", kn: "ಮುಖಪುಟ" } },
   {
     href: "",
-    label: { en: "About", kn: "ದೇವಸ್ಥಾನದ ಮಾಹಿತಿ" },
+    label: { en: "About", kn: "ದೈವಸ್ಥಾನದ ಮಾಹಿತಿ" },
     subLinks: [
       { href: "/history", label: { en: "History", kn: "ಇತಿಹಾಸ" } },
-      { href: "/temple", label: { en: "About Temple", kn: "ದೇವಸ್ಥಾನದ ಮಾಹಿತಿ" } },
+      { href: "/temple", label: { en: "About Temple", kn: "ದೈವಸ್ಥಾನದ ಮಾಹಿತಿ" } },
       { href: "/administration", label: { en: "Administration", kn: "ಆಡಳಿತ ಸಮಿತಿ" } },
-      { href: "/facilities", label: { en: "Temple Facilities", kn: "ದೇವಸ್ಥಾನದ ಸೌಲಭ್ಯಗಳು" } },
-      { href: "/how_to_reach", label: { en: "How to Reach", kn: "ದೇವಸ್ಥಾನಕ್ಕೆ ಹೋಗುವ ದಾರಿಯ ಮಾಹಿತಿ" } },
+      { href: "/how_to_reach", label: { en: "How to Reach", kn: "ದೈವಸ್ಥಾನಕ್ಕೆ ಹೋಗುವ ದಾರಿಯ ಮಾಹಿತಿ" } },
       { href: "/nearby_places", label: { en: "Nearby Places", kn: "ಹತ್ತಿರದ ಸ್ಥಳಗಳು" } },
     ],
   },
-  { href: "/sevas", label: { en: "Sevas", kn: "ಸೇವೆಗಳು" } },
   { href: "/donations", label: { en: "Donations", kn: "ದೇಣಿಗೆ" } },
   { href: "/newsupdates", label: { en: "News & Updates", kn: "ಸುದ್ದಿಗಳು" } },
   { href: "/gallery", label: { en: "Gallery", kn: "ಗ್ಯಾಲರಿ" } },
@@ -69,7 +67,7 @@ const isActive = (href: string) =>
                     <>
                       <button
                         className={`px-4 py-2 rounded-full transition
-                          ${active ? "bg-orange-100 text-orange-700" : "hover:bg-orange-50 text-orange-600"}
+                          ${active ? "bg-yellow-100 text-orange-700" : "hover:bg-yellow-50 text-orange-600"}
                           inline-flex items-center gap-1`}
                         aria-haspopup="true"
                       >
@@ -87,7 +85,7 @@ const isActive = (href: string) =>
     <Link
       key={s.href}
       href={s.href}
-      className="block w-full text-left rounded-lg px-3 py-2 hover:bg-orange-50 text-slate-700 hover:text-orange-700 text-sm"
+      className="block w-full text-left rounded-lg px-3 py-2 hover:bg-yellow-50 text-slate-700 hover:text-yellow-700 text-sm"
     >
       {s.label[currentLocale]}
     </Link>
@@ -100,14 +98,14 @@ const isActive = (href: string) =>
                     <Link
                       href={href}
                       className={`px-4 py-2 rounded-full relative
-                        ${active ? "text-orange-700 bg-orange-100" : "text-orange-600 hover:bg-orange-50"}
+                        ${active ? "text-orange-700 bg-yellow-100" : "text-orange-600 hover:bg-yellow-50"}
                         transition`}
                     >
                       {text}
                       {/* underline accent */}
                       <span
                         className={`absolute left-4 right-4 -bottom-1 h-[2px] rounded-full
-                          ${active ? "bg-orange-600" : "bg-transparent group-hover:bg-orange-300"}
+                          ${active ? "bg-yellow-600" : "bg-transparent group-hover:bg-yellow-300"}
                           transition-colors`}
                       />
                     </Link>
@@ -130,7 +128,7 @@ const isActive = (href: string) =>
                     key={text}
                     onClick={() => setAboutOpen((v) => !v)}
                     className={`shrink-0 px-4 py-2 rounded-full border
-                      ${aboutOpen ? "border-orange-400 bg-orange-50 text-orange-700" : "border-orange-200 text-orange-600 bg-white"}
+                      ${aboutOpen ? "border-yellow-400 bg-yellow-50 text-orange-700" : "border-yellow-200 text-orange-600 bg-white"}
                       inline-flex items-center gap-1`}
                   >
                     {text}
@@ -141,7 +139,7 @@ const isActive = (href: string) =>
                     key={text}
                     href={href}
                     className={`shrink-0 px-4 py-2 rounded-full border
-                      ${active ? "border-orange-400 bg-orange-50 text-orange-700" : "border-orange-200 text-orange-600 bg-white"}`}
+                      ${active ? "border-orange-400 bg-yellow-50 text-orange-700" : "border-orange-200 text-orange-600 bg-white"}`}
                   >
                     {text}
                   </Link>
@@ -158,7 +156,7 @@ const isActive = (href: string) =>
           key={s.href}
           href={s.href}
           onClick={() => setAboutOpen(false)}
-          className="rounded-lg px-3 py-2 hover:bg-orange-50 text-slate-700 hover:text-orange-700 block w-full text-left"
+          className="rounded-lg px-3 py-2 hover:bg-yellow-50 text-slate-700 hover:text-orange-700 block w-full text-left"
         >
           {s.label[currentLocale]}
         </Link>

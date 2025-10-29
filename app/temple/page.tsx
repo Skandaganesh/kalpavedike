@@ -42,14 +42,6 @@ const content: Record<
     title: "ದೈವಸ್ಥಾನದ ಮಾಹಿತಿ",
     details: [
       {
-        title: "ದೈವಸ್ಥಾನದ ಪೂಜಾ ಸಮಯ:",
-        description:
-          "ದರ್ಶನ ಸಮಯ:\nಬೆಳಗ್ಗೆ 7 ಗಂಟೆಯಿಂದ ಮಧ್ಯಾಹ್ನ 1 ಗಂಟೆಯ ತನಕ | ಸಂಜೆ 5 ಗಂಟೆಯಿಂದ ರಾತ್ರಿ 8 ಗಂಟೆಯ ತನಕ",
-      },
-      { title: "ಬೆಳಗ್ಗೆಯ ಪೂಜೆ", description: "8:00 - 8:15 ತನಕ" },
-      { title: "ಮಹಾಪೂಜೆ", description: "ಮಧ್ಯಾಹ್ನ 12:00 - 12:15 ತನಕ" },
-      { title: "ರಾತ್ರಿಯ ಪೂಜೆ", description: "ರಾತ್ರಿ 8 ಗಂಟೆ" },
-      {
         title:
           "ಶ್ರೀ ದೈವರಾಜ ಬಬ್ಬುಸ್ವಾಮಿ ಕಲ್ಪವೇದಿಕೆಕ್ಕೆ ಹತ್ತಿರದಲ್ಲಿರುವ ಬಸ್ಸು ನಿಲ್ದಾಣ",
         description: "KSRTC ಬಸ್ ನಿಲ್ದಾಣ, ಬಲಿಪತೋಟ, ಭಾರತಿ ನಗರ",
@@ -88,7 +80,7 @@ export default function About() {
   if (!isLocaleLoaded) return null; // Prevent rendering until locale is loaded
 
   return (
-    <main className="min-h-screen flex flex-col items-center p-6 bg-gradient-to-b from-white to-[#fbc687] font-serif">
+    <main className="min-h-screen flex flex-col items-center p-6 bg-gradient-to-b from-white to-[#f3da5a] font-serif">
       <h1 className="text-3xl font-bold mb-6 text-center text-black">
         {title}
       </h1>

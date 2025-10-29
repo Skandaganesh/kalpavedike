@@ -98,7 +98,7 @@ const NewsDetail = () => {
     <div className="container mx-auto p-6 bg-[#FFFFCC]">
       <button
         onClick={handleBackButtonClick}
-        className="mb-4 px-4 py-2 text-white bg-orange-600 hover:bg-orange-700 rounded-lg shadow-md"
+        className="mb-4 px-4 py-2 text-white bg-yellow-600 hover:bg-yellow-700 rounded-lg shadow-md"
       >
         &larr; Back
       </button>
