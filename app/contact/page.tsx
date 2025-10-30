@@ -57,6 +57,13 @@ const Contact: React.FC = () => {
   if (!isLocaleLoaded) return null; // Prevent rendering until locale is loaded
 
   return (
+    <>
+      <SEOComponent
+        title="Shri Daivaraja babbuswamy kalpavedike - A Sacred Destination for Devotees"
+        description="Explore the Shri Daivaraja babbuswamy kalpavedike, a revered spiritual destination in Karnataka, dedicated to peace, devotion, and cultural heritage."
+        image="http://www.kalpavedike.vercel.app/logo.jpg"
+        url="http://www.kalpavedike.vercel.app/"
+      />
    
      <div className="flex flex-col items-center justify-start bg-gradient-to-b from-white to-yellow-100 p-4 pt-8">
         <div className="flex flex-col lg:flex-row w-full max-w-5xl gap-10 items-center">
@@ -98,6 +105,7 @@ const Contact: React.FC = () => {
     </div>
   </div>
 </div>
+</>
   );
 };
 
