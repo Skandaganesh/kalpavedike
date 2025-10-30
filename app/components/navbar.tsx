@@ -25,11 +25,9 @@ const navLinks: NavLink[] = [
       { href: "/temple", label: { en: "About Temple", kn: "ದೈವಸ್ಥಾನದ ಮಾಹಿತಿ" } },
       { href: "/administration", label: { en: "Administration", kn: "ಆಡಳಿತ ಸಮಿತಿ" } },
       { href: "/how_to_reach", label: { en: "How to Reach", kn: "ದೈವಸ್ಥಾನಕ್ಕೆ ಹೋಗುವ ದಾರಿಯ ಮಾಹಿತಿ" } },
-      { href: "/nearby_places", label: { en: "Nearby Places", kn: "ಹತ್ತಿರದ ಸ್ಥಳಗಳು" } },
     ],
   },
   { href: "/donations", label: { en: "Donations", kn: "ದೇಣಿಗೆ" } },
-  { href: "/newsupdates", label: { en: "News & Updates", kn: "ಸುದ್ದಿಗಳು" } },
   { href: "/gallery", label: { en: "Gallery", kn: "ಗ್ಯಾಲರಿ" } },
   { href: "/contact", label: { en: "Contact", kn: "ಸಂಪರ್ಕಿಸಿ" } },
 ];

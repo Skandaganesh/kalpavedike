@@ -11,53 +11,38 @@ type LocaleType = "kn" | "en";
 // Define content for transport and pooja timings in both English and Kannada
 const content: Record<
   LocaleType,
-  { title: string; details: { title: string; description: string }[] }
+  { title: string; details: { title: string;}[] }
 > = {
   en: {
     title: "About Temple",
     details: [
       {
         title: "Pooja Timings of Shri Daivaraja babbuswamy kalpavedike:",
-        description: "7 am to 1 pm | 5 pm to 8 pm",
-      },
-      { title: "Morning Puja", description: "8:00 AM - 8:15 AM" },
-      { title: "Maha Puja", description: "12:00 PM - 12:15 PM" },
-      { title: "Night Puja", description: "8 PM" },
-      { title: "Nearest Bus Stand", description: "Balipathota, Bharathi Nagar" },
-      {
-        title: "Nearest Major Bus Stand",
-        description: "KSRTC Bus stand, Bejai (1 km)",
-      },
-      {
-        title: "Nearest Railway Station",
-        description: "Mangalore Railway Station (4 km)",
-      },
-      {
-        title: "Nearest Airport",
-        description: "Mangalore International Airport (13 km)",
       },
     ],
   },
   kn: {
-    title: "ದೈವಸ್ಥಾನದ ಮಾಹಿತಿ",
+    title: "ಶ್ರೀ ಕ್ಷೇತ್ರದಲ್ಲಿ ನಡೆಯುವ ಪೂಜಾ ಕಾರ್ಯಕ್ರಮಗಳು",
     details: [
       {
         title:
-          "ಶ್ರೀ ದೈವರಾಜ ಬಬ್ಬುಸ್ವಾಮಿ ಕಲ್ಪವೇದಿಕೆಕ್ಕೆ ಹತ್ತಿರದಲ್ಲಿರುವ ಬಸ್ಸು ನಿಲ್ದಾಣ",
-        description: "KSRTC ಬಸ್ ನಿಲ್ದಾಣ, ಬಲಿಪತೋಟ, ಭಾರತಿ ನಗರ",
+          "1. ಪ್ರತಿ ಮಂಗಳವಾರ, ಶುಕ್ರವಾರ ಪೂಜೆ ನಡೆಯುತ್ತದೆ ಪೂಜಾ ಸಮಯ ಸಂಜೆ ಗಂಟೆ 7.00ಕ್ಕೆ",
       },
       {
-        title: "ಹತ್ತಿರದ ಪ್ರಮುಖ ಬಸ್ಸು ನಿಲ್ದಾಣ",
-        description: "ಬಿಜೈ ಬಸ್ ನಿಲ್ದಾಣ (1 ಕಿ.ಮಿ)",
+        title: "2. ಶಿವರಾತ್ರಿ ದಿನ ವಿಶೇಷ ಪೂಜೆ ನಡೆಯುತ್ತದೆ ಪೂಜೆ ಸಮಯ ರಾತ್ರಿ ಗಂಟೆ 8.00ಕ್ಕೆ",
       },
       {
-        title: "ಹತ್ತಿರದಲ್ಲಿರುವ ರೈಲು ನಿಲ್ದಾಣ",
-        description: "ಮಂಗಳೂರು ರೈಲು ನಿಲ್ದಾಣ (4 ಕಿ.ಮಿ)",
+        title: "3. ಶ್ರಾವಣ ತಿಂಗಳಲ್ಲಿ(ಸೋಣ ತಿಂಗಳು)ಮೂರನೇ ರವಿವಾರ ಶ್ರೀ ಕಂಬೆಲ್ಲ ದೈವ ದರ್ಶನ ಸೇವೆ, ಹೂವಿನ ಪೂಜೆ ನಡೆಯುತ್ತದೆ. ಪೂಜಾ ಸಮಯ ಮಧ್ಯಾಹ್ನ ಗಂಟೆ 12.00ಕ್ಕೆ ನಂತರ ಅನ್ನಪ್ರಸಾದ ಇರುತ್ತದೆ. ಅದೇ ದಿನ ಭಕ್ತಾಧಿಗಳು ಹೂವಿನ ಪೂಜೆ ಸೇವೆ ಮಾಡಬಹುದು. ಹೂವಿನ ಪೂಜೆ ಬಾಬು ರೂ. 100",
       },
       {
-        title: "ಹತ್ತಿರದಲ್ಲಿರುವ ವಿಮಾನ ನಿಲ್ದಾಣ",
-        description: "ಮಂಗಳೂರು ಅಂತಾರಾಷ್ಟ್ರೀಯ ವಿಮಾನ ನಿಲ್ದಾಣ (13 ಕಿ.ಮಿ)",
+        title: "4. ಪ್ರತಿ ಸಂಕ್ರಮಣದಿನದಂದು ಪೂಜೆ ನಡೆಯುತ್ತದೆ.ಪೂಜಾ ಸಮಯ ರಾತ್ರಿ ಗಂಟೆ 8.00ಕ್ಕೆ ಅದೇ ದಿನ ಶ್ರೀ ಕಂಬೆಲ್ಲು ದೈವಕ್ಕೆ ತನು ತಂಜಲ ಸೇವೆ ಭಕ್ತಾಧಿಗಳು, ಹರಕೆ ರೂಪದಲ್ಲಿ ಸಲ್ಲಿಸಬಹುದು. (ಬೇಕಾಗುವ ವಸ್ತುಗಳು ಸೀಯಾಳ, ಹಣ್ಣುಕಾಯಿ, ದನದ ಹಾಲು, ಹೂ ಹೀಗಾರ ಕಾಣಿಕೆ)ಸಂಕ್ರಮಣ ಬಾಬು ರೂ 1300/-",
       },
+      {
+        title: "5. ದೀಪಾವಳಿಯಲ್ಲಿ ಬಲೀಂದ್ರ ಪೂಜೆ (ಪರ್ಬ ಚೌ3) ನಡೆಯುತ್ತದೆ ಪೂಜಾ ಸಮಯ ರಾತ್ರಿ ಗಂಟೆ 8.00ಕ್ಕೆ "
+      },
+      {
+        title: "6. ಜನವರಿ ತಿಂಗಳ ಕೊನೆಯ ವಾರದಲ್ಲಿ ವಾರ್ಷಿಕ ನೇಮೋತ್ಸವ ಮೂರು ದಿನ ನಡೆಯುತ್ತದೆ (ಶನಿವಾರ, ರವಿವಾರ, ಸೋಮವಾರ) ವಿ.ಸೂ: ಭಕ್ತಾಧಿಗಳಲ್ಲಿ ಎಣ್ಣೆ, ಹೂ, ಹಿಂಗಾರ ಕಾಣಿಕೆ ಕೃತಜ್ಞತಪೂರ್ವಕವಾಗಿ ಸ್ವೀಕರಿಸಲಾಗುವುದು. ಕೋಳಿಯನ್ನು ನೇಮೋತ್ಸವ ಸಂದರ್ಭದಲ್ಲಿ ಸ್ವೀಕರಿಸಲಾಗುವುದು. ಹರಕೆ ರೂಪದಲ್ಲಿ ಸಂಕ್ರಮಣ ಪೂಜೆ, ಅನ್ನಪ್ರಸಾದ ಸಲ್ಲಿಸಬಹುದು ಸಂಕ್ರಮಣ ಬಾಬು ರೂ-1300/-"
+      }
     ],
   },
 };
@@ -85,12 +70,9 @@ export default function About() {
         {title}
       </h1>
       <div className="max-w-2xl mx-auto bg-opacity-90 p-8 rounded-lg shadow-lg">
-        {details.map(({ title, description }, index) => (
+        {details.map(({ title }, index) => (
           <div key={index} className="mb-6">
             <h2 className="text-orange-600 font-semibold text-lg">{title}</h2>
-            <p className="text-[#4a4a4a] leading-relaxed text-base mt-2 whitespace-pre-line">
-              {description}
-            </p>
             {index < details.length - 1 && (
               <hr className="border-t border-gray-300 my-4" />
             )}
