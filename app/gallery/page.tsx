@@ -78,33 +78,90 @@ export default function Home() {
 
   return (
 <main className="min-h-screen flex flex-col items-center p-6 bg-gradient-to-b from-white to-[#f3da5a] font-serif">
-      <h1 className="text-3xl font-bold mb-6 text-center text-black">
-        ಫೋಟೋ ಗ್ಯಾಲರಿ
-      </h1>
+  <h1 className="text-3xl font-bold mb-6 text-center text-black">
+    ಫೋಟೋ ಗ್ಯಾಲರಿ
+  </h1>
 
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
-        {photos.map((photo, index) => (
-          <div
-            key={index}
-            className="relative group overflow-hidden rounded-2xl shadow-md"
-          >
-            {/* Photo */}
-            <Image
-                src={photo.src}
-                alt={photo.title}
-                width={400}
-                height={300}
-                className="object-contain w-full h-64 bg-gray-200"
-                priority
-              />
+  <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+    {photos.map((photo, index) => (
+      <div
+        key={index}
+        className="relative group overflow-hidden rounded-2xl shadow-md"
+      >
+        {/* Photo */}
+        <Image
+          src={photo.src}
+          alt={photo.title}
+          width={400}
+          height={300}
+          className="object-contain w-full h-64 bg-gray-200"
+          priority
+        />
 
-            {/* Hover Overlay */}
-            <div className="absolute inset-0 bg-black bg-opacity-60 opacity-0 group-hover:opacity-100 transition duration-500 flex flex-col justify-center items-center text-center text-white p-4">
-              <h3 className="text-lg font-semibold mb-2">{photo.title}</h3>
-            </div>
-          </div>
-        ))}
+        {/* Hover Overlay */}
+        <div className="absolute inset-0 bg-black bg-opacity-60 opacity-0 group-hover:opacity-100 transition duration-500 flex flex-col justify-center items-center text-center text-white p-4">
+          <h3 className="text-lg font-semibold mb-2">{photo.title}</h3>
+        </div>
       </div>
-    </main>
+    ))}
+
+      {/* First YouTube video */}
+      <div className="relative rounded-2xl shadow-md w-full h-64 cursor-pointer">
+        <a
+          href="https://www.youtube.com/watch?v=cOO5bSVeM4g"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="block w-full h-full"
+        >
+          <img
+            src="https://img.youtube.com/vi/cOO5bSVeM4g/hqdefault.jpg"
+            alt="YouTube Video 1"
+            className="object-cover w-full h-full"
+          />
+          {/* Always visible YouTube Icon */}
+          <div className="absolute inset-0 flex justify-center items-center pointer-events-none">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              className="h-16 w-16 text-white drop-shadow-lg"
+              fill="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path d="M10 8l6 4-6 4V8z" /> {/* Play icon */}
+              <path fill="none" d="M0 0h24v24H0z" />
+            </svg>
+          </div>
+        </a>
+      </div>
+
+      {/* Second YouTube video */}
+      <div className="relative rounded-2xl shadow-md w-full h-64 cursor-pointer">
+        <a
+          href="https://www.youtube.com/watch?v=5CIfdMlj1qs"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="block w-full h-full"
+        >
+          <img
+            src="https://img.youtube.com/vi/5CIfdMlj1qs/hqdefault.jpg"
+            alt="YouTube Video 2"
+            className="object-cover w-full h-full"
+          />
+          {/* Always visible YouTube Icon */}
+          <div className="absolute inset-0 flex justify-center items-center pointer-events-none">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              className="h-16 w-16 text-white drop-shadow-lg"
+              fill="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path d="M10 8l6 4-6 4V8z" /> {/* Play icon */}
+              <path fill="none" d="M0 0h24v24H0z" />
+            </svg>
+          </div>
+        </a>
+      </div>
+  </div>
+</main>
+
   );
 }
