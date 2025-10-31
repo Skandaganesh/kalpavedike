@@ -19,6 +19,7 @@ const footerText: Record<
     addressTitle: string;
     address: string[];
     contactNumbers: string;
+    email: string;
     privacyPolicy: string;
     refundPolicy: string;
     admin: string;
@@ -45,6 +46,7 @@ const footerText: Record<
       "PIN - 575004",
     ],
     contactNumbers: "7349753102, 9945034337",
+    email: "balipathota2020@gmail.com",
     privacyPolicy: "Privacy Policy",
     refundPolicy: " Refund & Cancellation",
     admin: " Admin",
@@ -72,6 +74,7 @@ const footerText: Record<
       "ಪಿನ್ - 575004",
     ],
     contactNumbers: "7349753102, 9945034337",
+    email: "balipathota2020@gmail.com",
     privacyPolicy: "ಗೌಪ್ಯತಾ ನೀತಿ",
     refundPolicy: " ಮರುಪಾವತಿ ಮತ್ತು ರದ್ದುಪಡಿಸುವಿಕೆ",
     admin: " ಅಡ್ಮಿನ್",
@@ -185,8 +188,10 @@ const Footer: React.FC = () => {
                   fill="currentColor"
                   xmlns="http://www.w3.org/2000/svg"
                 >
-                   </svg>
+                  <path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 2l-8 5-8-5V6l8 5 8-5v2zM4 18v-8l8 5 8-5v8H4z" />
                 
+                   </svg>
+                 <p className="mt-0.5">{text.email}</p>
               </div>
             </address>
           </div>

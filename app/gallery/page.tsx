@@ -98,7 +98,7 @@ export default function Home() {
 
   return (
     <main className="min-h-screen flex flex-col items-center p-6 bg-gradient-to-b from-white to-[#f3da5a] font-serif">
-      <h1 className="text-3xl font-bold mb-6 text-center text-black">ಫೋಟೋ ಗ್ಯಾಲರಿ</h1>
+      <h1 className="text-3xl font-bold mb-6 text-center text-black">ಫೋಟೋ & ವಿಡಿಯೋ ಗ್ಯಾಲರಿ</h1>
 
       {/* Photo Grid */}
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
@@ -173,6 +173,35 @@ export default function Home() {
             </div>
           </a>
         </div>
+
+        {/* YouTube Video 3 */}
+        
+          <div className="relative rounded-2xl shadow-md w-full h-64 cursor-pointer">
+            <a
+              href="https://youtu.be/5Is7Z5AQAcc?si=wpMkB5chJaajcThQ"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="block w-full h-full"
+            >
+              <img
+                src="https://img.youtube.com/vi/5Is7Z5AQAcc/hqdefault.jpg"
+                alt="YouTube Video 3"
+                className="object-cover w-full h-full rounded-2xl"
+              />
+              {/* Centered YouTube Play Icon */}
+              <div className="absolute inset-0 flex justify-center items-center pointer-events-none">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  className="h-16 w-16 text-white drop-shadow-lg"
+                  fill="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path d="M10 8l6 4-6 4V8z" />
+                </svg>
+              </div>
+          </a>
+        </div>
+
       </div>
 
       {/* Modal (Lightbox) */}
@@ -183,46 +212,47 @@ export default function Home() {
         >
           <div className="relative max-w-5xl w-full flex justify-center items-center p-4">
             {/* Close Button */}
-            <button
-              className="absolute top-4 right-4 text-black text-3xl bg-white rounded-full p-2 shadow-md"
-              onClick={(e) => {
-                e.stopPropagation();
-                closeModal();
-              }}
-            >
-              <FontAwesomeIcon icon={faTimes} />
-            </button>
+            {/* Close Button */}
+              <button
+                className="absolute top-4 right-4 text-white text-3xl bg-transparent rounded-full p-3 hover:bg-black/20 transition"
+                onClick={(e) => {
+                  e.stopPropagation();
+                  closeModal();
+                }}
+              >
+                <FontAwesomeIcon icon={faTimes} />
+              </button>
 
-            {/* Prev Button */}
-            <button
-              className="absolute left-4 text-black text-3xl bg-white rounded-full p-2 shadow-md"
-              onClick={(e) => {
-                e.stopPropagation();
-                showPrev();
-              }}
-            >
-              <FontAwesomeIcon icon={faArrowLeft} />
-            </button>
+              {/* Prev Button */}
+              <button
+                className="absolute left-4 text-white text-3xl bg-transparent rounded-full p-3 hover:bg-black/20 transition"
+                onClick={(e) => {
+                  e.stopPropagation();
+                  showPrev();
+                }}
+              >
+                <FontAwesomeIcon icon={faArrowLeft} />
+              </button>
 
-            {/* Image */}
-            <Image
-              src={photos[selectedIndex].src}
-              alt={photos[selectedIndex].title}
-              width={1000}
-              height={700}
-              className="object-contain max-h-[80vh] rounded-lg"
-            />
+              {/* Image */}
+              <Image
+                src={photos[selectedIndex].src}
+                alt={photos[selectedIndex].title}
+                width={1000}
+                height={700}
+                className="object-contain max-h-[80vh] rounded-lg"
+              />
 
-            {/* Next Button */}
-            <button
-              className="absolute right-4 text-black text-3xl bg-white rounded-full p-2 shadow-md"
-              onClick={(e) => {
-                e.stopPropagation();
-                showNext();
-              }}
-            >
-              <FontAwesomeIcon icon={faArrowRight} />
-            </button>
+              {/* Next Button */}
+              <button
+                className="absolute right-4 text-white text-3xl bg-transparent rounded-full p-3 hover:bg-black/20 transition"
+                onClick={(e) => {
+                  e.stopPropagation();
+                  showNext();
+                }}
+              >
+                <FontAwesomeIcon icon={faArrowRight} />
+              </button>
           </div>
         </div>
       )}
