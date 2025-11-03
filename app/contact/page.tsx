@@ -17,6 +17,7 @@ const contactText: Record<
     googleMap: string;
     address: string;
     phone: string;
+    email: string;
     
   }
 > = {
@@ -27,6 +28,7 @@ const contactText: Record<
     address:
       "Shri Daivaraja babbuswamy kalpavedike,\nBalipathotaa,\nBharathinagar, bejai, \nMangalore PIN-575004",
     phone: "Contact Number:+91 7349753102, +91 9945034337",
+    email: "balipathota2020@gmail.com",
     
   },
   kn: {
@@ -36,6 +38,7 @@ const contactText: Record<
     address:
       "ಶ್ರೀ ದೈವರಾಜ ಬಬ್ಬುಸ್ವಾಮಿ ಕಲ್ಪವೇದಿಕೆ,\nಬಲಿಪತೋಟ,\nಭಾರತಿನಗರ, ಬಿಜೈ,\nಮಂಗಳೂರು ಪಿನ್-575004",
     phone: "ಸಂಪರ್ಕ ಸಂಖ್ಯೆ: +91 7349753102, +91 9945034337",
+    email: "ಇ-ಮೇಲ್ ವಿಳಾಸ: balipathota2020@gmail.com",
   },
 };
 
@@ -80,6 +83,9 @@ const Contact: React.FC = () => {
               </h2>
               <p className="text-gray-800">
                 <strong>{text.phone}</strong>
+              </p>
+              <p className="text-gray-800">
+                <strong>{text.email}</strong>
               </p>
             </div>
           </div>

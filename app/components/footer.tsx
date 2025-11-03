@@ -20,9 +20,6 @@ const footerText: Record<
     address: string[];
     contactNumbers: string;
     email: string;
-    privacyPolicy: string;
-    refundPolicy: string;
-    admin: string;
     rightsReserved: string;
     designedBy: string;
     designerName: string;
@@ -47,9 +44,6 @@ const footerText: Record<
     ],
     contactNumbers: "7349753102, 9945034337",
     email: "balipathota2020@gmail.com",
-    privacyPolicy: "Privacy Policy",
-    refundPolicy: " Refund & Cancellation",
-    admin: " Admin",
     rightsReserved:
       " Shri Daivaraja babbuswamy kalpavedike, Balipathotaa. All Rights Reserved",
     designedBy: "Designed by:",
@@ -75,9 +69,6 @@ const footerText: Record<
     ],
     contactNumbers: "7349753102, 9945034337",
     email: "balipathota2020@gmail.com",
-    privacyPolicy: "ಗೌಪ್ಯತಾ ನೀತಿ",
-    refundPolicy: " ಮರುಪಾವತಿ ಮತ್ತು ರದ್ದುಪಡಿಸುವಿಕೆ",
-    admin: " ಅಡ್ಮಿನ್",
     rightsReserved:
       "ಶ್ರೀ ದೈವರಾಜ ಬಬ್ಬುಸ್ವಾಮಿ ಕಲ್ಪವೇದಿಕೆ, ಬಲಿಪತೋಟ. ಎಲ್ಲಾ ಹಕ್ಕುಗಳನ್ನು ಕಾಯ್ದಿರಿಸಲಾಗಿದೆ",
     designedBy: "ಹೋಸ್ಟಿಂಗ್ ಮತ್ತು ನಿರ್ವಹಣೆ:",
@@ -214,18 +205,7 @@ const Footer: React.FC = () => {
       {/* Footer Bottom Section */}
       <div className="bg-black text-white py-2 text-center site-footer-bottom mx-0 mb-0">
         <p>
-          © 2025 | Disclaimer -{" "}
-          <Link href="/policy" className="text-orange-400 hover:underline">
-            {text.privacyPolicy}
-          </Link>{" "}
-          |
-          <Link href="/policy" className="text-orange-400 hover:underline">
-            {text.refundPolicy}
-          </Link>{" "}
-          |
-          <Link href="/admin" className="text-orange-400 hover:underline">
-            {text.admin}
-          </Link>{" "}
+          © 2025 | Disclaimer{" "}
           | {text.rightsReserved}
         </p>
         <p>

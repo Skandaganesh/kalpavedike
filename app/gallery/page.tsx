@@ -40,6 +40,8 @@ import P32 from "/app/gallery/p32.jpg";
 import P33 from "/app/gallery/p33.jpg";
 import P34 from "/app/gallery/p34.jpg";
 import P35 from "/app/gallery/p35.jpg";
+import P36 from "/app/gallery/p36.jpg";
+
 
 export default function Home() {
   const photos = [
@@ -78,6 +80,7 @@ export default function Home() {
     { src: P33, title: "ಯೋಗ ಶಿಬಿರ" },
     { src: P34, title: "ವೈದ್ಯರಿಗೆ ಸನ್ಮಾನ ಡಾಕ್ಟರ್ ಟಿ ಆರ್ ರಾವ್" },
     { src: P35, title: "ಸನ್ಮಾನ ಕಾರ್ಯಕ್ರಮ" },
+    { src: P36, title: "ವಿದ್ಯಾ ಸಿರಿ" },
   ];
 
   const [selectedIndex, setSelectedIndex] = useState<number | null>(null);
@@ -98,8 +101,7 @@ export default function Home() {
 
   return (
     <main className="min-h-screen flex flex-col items-center p-6 bg-gradient-to-b from-white to-[#f3da5a] font-serif">
-      <h1 className="text-3xl font-bold mb-6 text-center text-black">ಫೋಟೋ & ವಿಡಿಯೋ ಗ್ಯಾಲರಿ</h1>
-
+      <h1 className="text-3xl font-bold mb-6 text-center text-black mt-4">ಫೋಟೋ & ವಿಡಿಯೋ ಗ್ಯಾಲರಿ</h1>
       {/* Photo Grid */}
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
         {photos.map((photo, index) => (

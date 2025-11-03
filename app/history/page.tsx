@@ -5,16 +5,11 @@ import { useSelector, useDispatch } from "react-redux";
 import { RootState, AppDispatch } from "../store";
 import { changeLocale } from "../store/localeSlice";
 
-// Define a type for the locales
 type LocaleType = "kn" | "en";
 
 const historicalMessages: Record<LocaleType, string[]> = {
-  en: [
-    "*",
-  ],
-  kn: [
-    "*",
-  ],
+  en: ["This is a sample description in English."],
+  kn: ["ಕನ್ನಡದಲ್ಲಿ ವಿವರಣೆ."],
 };
 
 const titles: Record<LocaleType, string> = {
@@ -37,14 +32,27 @@ export default function About() {
     setIsLocaleLoaded(true);
   }, [dispatch]);
 
-  if (!isLocaleLoaded) return null; // Prevent rendering until locale is loaded
+  if (!isLocaleLoaded) return null;
 
   return (
-    <main className="min-h-screen flex flex-col items-center p-6 text-center">
-      <h1 className="text-3xl font-bold mb-6">{titles[currentLocale]}</h1>
+    <main className="flex flex-col items-center p-4 text-center">
+      <h1 className="text-3xl font-bold mb-2">{titles[currentLocale]}</h1>
+
+      {/* 🎥 Add video here */}
+      <div className="w-full max-w-md mx-auto mb-2">
+        <video
+          className="w-full h-auto rounded-3xl shadow-lg"
+          controls
+          preload="auto"
+        >
+          <source src="/history/v1.mp4" type="video/mp4" />
+          Your browser does not support the video tag.
+        </video>
+      </div>
+
       <div className="max-w-2xl mx-auto">
         {messages.map((para: string, index: number) => (
-          <p key={index} className="text-lg mb-4 text-justify">
+          <p key={index} className="text-lg text-justify mb-2">
             {para}
           </p>
         ))}
