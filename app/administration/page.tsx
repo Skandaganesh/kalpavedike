@@ -13,6 +13,8 @@ import P4 from "/app/administration/p4.jpg";
 import P5 from "/app/administration/p5.jpg";
 import P6 from "/app/administration/p6.jpg";
 import P7 from "/app/administration/p7.jpg";
+import P8 from "/app/administration/p8.jpg";
+
 
 
 type LocaleType = "kn" | "en";
@@ -197,7 +199,7 @@ export default function AdministrationCommittee() {
       <div className="mt-8 text-center">
         <h2 className="text-3xl font-bold text-red-800 mb-6">ಗೌರವ ಸಲಹೆಗಾರರು</h2>
 
-        <div className="flex flex-col items-center gap-8">
+  <div className="flex flex-col items-center gap-8">
   {/* First Photo */}
   <div className="relative w-full max-w-3xl h-auto">
     <Image
@@ -208,15 +210,28 @@ export default function AdministrationCommittee() {
   </div>
 
   {/* Second Photo - Slightly Larger */}
-  <div className="relative w-full max-w-xl h-auto">
+  <div className="flex gap-4 justify-center">
+  <div className="w-[600px]">
     <Image
       src={P7}
       alt="Person 1"
-      className="rounded-xl shadow-lg w-full h-auto object-contain"
+      className="rounded-xl shadow-lg w-full h-auto object-cover"
       width={700}
       height={700}
     />
   </div>
+
+  <div className="w-[450px]">
+    <Image
+      src={P8}
+      alt="Person 2"
+      className="rounded-xl shadow-lg w-full h-auto object-cover"
+      width={700}
+      height={700}
+    />
+  </div>
+</div>
+
 </div>
 
 
