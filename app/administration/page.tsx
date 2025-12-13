@@ -197,45 +197,47 @@ export default function AdministrationCommittee() {
       </div>
              {/* ಗೌರವ ಸಲಹೆಗಾರರು Section */}
       <div className="mt-8 text-center">
-        <h2 className="text-3xl font-bold text-red-800 mb-6">ಗೌರವ ಸಲಹೆಗಾರರು</h2>
+  <h2 className="text-3xl font-bold text-red-800 mb-6">ಗೌರವ ಸಲಹೆಗಾರರು</h2>
 
   <div className="flex flex-col items-center gap-8">
-  {/* First Photo */}
-  <div className="relative w-full max-w-3xl h-auto">
-    <Image
-      src={P6}
-      alt="ಗೌರವ ಸಲಹೆಗಾರರು"
-      className="rounded-xl shadow-lg w-full h-auto object-contain"
-    />
-  </div>
 
-  {/* Second Photo - Slightly Larger */}
-  <div className="flex gap-4 justify-center">
-  <div className="w-[600px]">
-    <Image
-      src={P7}
-      alt="Person 1"
-      className="rounded-xl shadow-lg w-full h-auto object-cover"
-      width={700}
-      height={700}
-    />
-  </div>
+    {/* First Photo */}
+    <div className="relative w-full max-w-3xl h-auto">
+      <Image
+        src={P6}
+        alt="ಗೌರವ ಸಲಹೆಗಾರರು"
+        className="rounded-xl shadow-lg w-full h-auto object-contain"
+      />
+    </div>
 
-  <div className="w-[450px]">
-    <Image
-      src={P8}
-      alt="Person 2"
-      className="rounded-xl shadow-lg w-full h-auto object-cover"
-      width={700}
-      height={700}
-    />
-  </div>
-</div>
+    {/* Second & Third Photos - Responsive (mobile stacked, desktop side-by-side) */}
+    <div className="flex flex-col md:flex-row justify-center items-center gap-6">
 
-</div>
-
-
+      <div className="w-full md:w-[400px]">
+        <Image
+          src={P7}
+          alt="Person 1"
+          className="rounded-xl shadow-lg w-full h-auto object-cover"
+          width={700}
+          height={700}
+        />
       </div>
+
+      <div className="w-full md:w-[400px]">
+        <Image
+          src={P8}
+          alt="Person 2"
+          className="rounded-xl shadow-lg w-full h-auto object-cover"
+          width={700}
+          height={700}
+        />
+      </div>
+
+    </div>
+
+  </div>
+</div>
+
     </main>
   );
 }
