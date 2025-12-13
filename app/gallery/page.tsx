@@ -41,6 +41,8 @@ import P33 from "/app/gallery/p33.jpg";
 import P34 from "/app/gallery/p34.jpg";
 import P35 from "/app/gallery/p35.jpg";
 import P36 from "/app/gallery/p36.jpg";
+import P37 from "/app/gallery/p37.jpeg";
+
 
 
 export default function Home() {
@@ -81,6 +83,7 @@ export default function Home() {
     { src: P34, title: "ವೈದ್ಯರಿಗೆ ಸನ್ಮಾನ ಡಾಕ್ಟರ್ ಟಿ ಆರ್ ರಾವ್" },
     { src: P35, title: "ಸನ್ಮಾನ ಕಾರ್ಯಕ್ರಮ" },
     { src: P36, title: "ವಿದ್ಯಾ ಸಿರಿ" },
+    { src: P37, title: "ತೆಂಕ ಎಡಪದವಿನ ನಿವಾಸಿಯಾದ ವಿಜಯಲಕ್ಷ್ಮಿ ಎಂಬವರ 2 ಹೆಣ್ಣು ಮಕ್ಕಳ ವಿದ್ಯಾಭ್ಯಾಸಕ್ಕಾಗಿ ಶ್ರೀಕಲ್ಪ" },
   ];
 
   const [selectedIndex, setSelectedIndex] = useState<number | null>(null);

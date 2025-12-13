@@ -12,6 +12,8 @@ import P3 from "/app/administration/p3.jpg";
 import P4 from "/app/administration/p4.jpg";
 import P5 from "/app/administration/p5.jpg";
 import P6 from "/app/administration/p6.jpg";
+import P7 from "/app/administration/p7.jpg";
+
 
 type LocaleType = "kn" | "en";
 type ImageType = typeof P1;
@@ -191,24 +193,38 @@ export default function AdministrationCommittee() {
           </div>
         ))}
       </div>
-       {/* ಗೌರವ ಸಲಹೆಗಾರರು Section */}
-          <div className="mt-8 text-center">
-            <h2 className="text-3xl font-bold text-red-800 mb-6">ಗೌರವ ಸಲಹೆಗಾರರು</h2>
-            <div className="flex justify-center">
-              <div className="relative w-full max-w-3xl h-auto">
-                <Image
-                  src={P6}
-                  alt="ಗೌರವ ಸಲಹೆಗಾರರು"
-                  className="rounded-xl shadow-lg w-full h-auto object-contain"
-                />
-              </div>
-            </div>
-          </div>
+             {/* ಗೌರವ ಸಲಹೆಗಾರರು Section */}
+      <div className="mt-8 text-center">
+        <h2 className="text-3xl font-bold text-red-800 mb-6">ಗೌರವ ಸಲಹೆಗಾರರು</h2>
+
+        <div className="flex flex-col items-center gap-8">
+  {/* First Photo */}
+  <div className="relative w-full max-w-3xl h-auto">
+    <Image
+      src={P6}
+      alt="ಗೌರವ ಸಲಹೆಗಾರರು"
+      className="rounded-xl shadow-lg w-full h-auto object-contain"
+    />
+  </div>
+
+  {/* Second Photo - Slightly Larger */}
+  <div className="relative w-full max-w-xl h-auto">
+    <Image
+      src={P7}
+      alt="Person 1"
+      className="rounded-xl shadow-lg w-full h-auto object-contain"
+      width={700}
+      height={700}
+    />
+  </div>
+</div>
 
 
+      </div>
     </main>
   );
 }
+
 
 function PlaceCard({
   name,
