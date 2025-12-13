@@ -72,7 +72,7 @@ const footerText: Record<
     rightsReserved:
       "ಶ್ರೀ ದೈವರಾಜ ಬಬ್ಬುಸ್ವಾಮಿ ಕಲ್ಪವೇದಿಕೆ, ಬಲಿಪತೋಟ ಎಲ್ಲಾ ಹಕ್ಕುಗಳನ್ನು ಕಾಯ್ದಿರಿಸಲಾಗಿದೆ",
     designedBy: "ಹೋಸ್ಟಿಂಗ್ ಮತ್ತು ನಿರ್ವಹಣೆ:",
-    designerName: "Pallavi P V & Skanda Ganesh P V",
+    designerName: "Pallavi P V ",
   },
 };
 
