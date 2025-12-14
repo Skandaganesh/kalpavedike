@@ -51,8 +51,8 @@
   <!-- Main title -->
   <g class="kn" text-anchor="middle">
     <!-- subtle white outline by layering -->
-    <text x="1010" y="120" font-size="60" font-weight="900" fill="#ffffff" stroke="#ffffff" stroke-width="20">ಶ್ರೀ ದೈವರಾಜ ಬಬ್ಬುಸ್ವಾಮಿ ಕಲ್ಪವೇದಿಕೆ</text>
-    <text x="1010" y="120" font-size="60" font-weight="900" fill="#b10c0f">ಶ್ರೀ ದೈವರಾಜ ಬಬ್ಬುಸ್ವಾಮಿ ಕಲ್ಪವೇದಿಕೆ</text>
+    <text x="1010" y="120" font-size="60" font-weight="900" fill="#ffffff" stroke="#ffffff" stroke-width="20">ಶ್ರೀ ದೈವರಾಜ ಬಬ್ಬುಸ್ವಾಮಿ  ಶ್ರೀ ಕಲ್ಪವೇದಿಕೆ</text>
+    <text x="1010" y="120" font-size="60" font-weight="900" fill="#b10c0f">ಶ್ರೀ ದೈವರಾಜ ಬಬ್ಬುಸ್ವಾಮಿ  ಶ್ರೀ ಕಲ್ಪವೇದಿಕೆ</text>
   </g>
 
   <!-- Location line -->

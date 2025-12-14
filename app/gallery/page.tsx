@@ -3,7 +3,11 @@
 import { useState, useEffect, useCallback } from "react";
 import Image from "next/image";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faArrowLeft, faArrowRight, faTimes } from "@fortawesome/free-solid-svg-icons";
+import {
+  faArrowLeft,
+  faArrowRight,
+  faTimes,
+} from "@fortawesome/free-solid-svg-icons";
 
 import P1 from "/app/gallery/p1.jpg";
 import P2 from "/app/gallery/p2.jpg";
@@ -43,8 +47,6 @@ import P35 from "/app/gallery/p35.jpg";
 import P36 from "/app/gallery/p36.jpg";
 import P37 from "/app/gallery/p37.jpeg";
 
-
-
 export default function Home() {
   const photos = [
     { src: P1, title: "ಅಭಿನಂದನಾ ಕಾರ್ಯಕ್ರಮ" },
@@ -52,10 +54,22 @@ export default function Home() {
     { src: P3, title: "ಅಭಿನಂದನಾ ಕಾರ್ಯಕ್ರಮ" },
     { src: P4, title: "ಅಭಿನಂದನಾ ಕಾರ್ಯಕ್ರಮ" },
     { src: P5, title: "ಅಭಿನಂದನಾ ಕಾರ್ಯಕ್ರಮ" },
-    { src: P6, title: "ಕೊರೋನಾ ಸಂದರ್ಭ ದೇವಸ್ಥಾನದ ವತಿಯಿಂದ ಗೌರವದನ ಕಿಟ್ ವಿತಾರಣೆ" },
-    { src: P7, title: "ಕೊರೋನಾ ಸಂದರ್ಭ ದೇವಸ್ಥಾನದ ವತಿಯಿಂದ ಗೌರವದನ ಕಿಟ್ ವಿತಾರಣೆ" },
-    { src: P8, title: "ಕೊರೋನಾ ಸಂದರ್ಭ ದೇವಸ್ಥಾನದ ವತಿಯಿಂದ ಗೌರವದನ ಕಿಟ್ ವಿತಾರಣೆ" },
-    { src: P9, title: "ಕೊರೋನಾ ಸಂದರ್ಭ ದೇವಸ್ಥಾನದ ವತಿಯಿಂದ ಗೌರವದನ ಕಿಟ್ ವಿತಾರಣೆ" },
+    {
+      src: P6,
+      title: "ಕೊರೋನಾ ಸಂದರ್ಭ ದೇವಸ್ಥಾನದ ವತಿಯಿಂದ ಗೌರವದನ ಕಿಟ್ ವಿತಾರಣೆ",
+    },
+    {
+      src: P7,
+      title: "ಕೊರೋನಾ ಸಂದರ್ಭ ದೇವಸ್ಥಾನದ ವತಿಯಿಂದ ಗೌರವದನ ಕಿಟ್ ವಿತಾರಣೆ",
+    },
+    {
+      src: P8,
+      title: "ಕೊರೋನಾ ಸಂದರ್ಭ ದೇವಸ್ಥಾನದ ವತಿಯಿಂದ ಗೌರವದನ ಕಿಟ್ ವಿತಾರಣೆ",
+    },
+    {
+      src: P9,
+      title: "ಕೊರೋನಾ ಸಂದರ್ಭ ದೇವಸ್ಥಾನದ ವತಿಯಿಂದ ಗೌರವದನ ಕಿಟ್ ವಿತಾರಣೆ",
+    },
     { src: P10, title: "ಗಣೇಶನ ಚಿತ್ರ ಬಿಡಿಸುವ ಸ್ಪರ್ಧೆ 2020" },
     { src: P11, title: "ಗಣೇಶನ ಚಿತ್ರ ಬಿಡಿಸುವ ಸ್ಪರ್ಧೆ 2020" },
     { src: P12, title: "ಗಣೇಶನ ಚಿತ್ರ ಬಿಡಿಸುವ ಸ್ಪರ್ಧೆ 2020" },
@@ -76,21 +90,37 @@ export default function Home() {
     { src: P27, title: "ಪುಸ್ತಕ ವಿತರಣಾ ಕಾರ್ಯಕ್ರಮ 2023" },
     { src: P28, title: "ಪುಸ್ತಕ ವಿತರಣಾ ಕಾರ್ಯಕ್ರಮ 2023" },
     { src: P29, title: "ಪುಸ್ತಕ ವಿತರಣಾ ಕಾರ್ಯಕ್ರಮ 2023" },
-    { src: P30, title: "ಪ್ರಥಮ ಪಿಯುಸಿ ಅತ್ಯಧಿಕ ಅಂಕಗಳಿಸಿದ ವಿದ್ಯಾರ್ಥಿಗಳಿಗೆ ಸನ್ಮಾನ" },
+    {
+      src: P30,
+      title: "ಪ್ರಥಮ ಪಿಯುಸಿ ಅತ್ಯಧಿಕ ಅಂಕಗಳಿಸಿದ ವಿದ್ಯಾರ್ಥಿಗಳಿಗೆ ಸನ್ಮಾನ",
+    },
     { src: P31, title: "ಯೋಗ ಶಿಬಿರ" },
     { src: P32, title: "ಯೋಗ ಶಿಬಿರ" },
     { src: P33, title: "ಯೋಗ ಶಿಬಿರ" },
     { src: P34, title: "ವೈದ್ಯರಿಗೆ ಸನ್ಮಾನ ಡಾಕ್ಟರ್ ಟಿ ಆರ್ ರಾವ್" },
     { src: P35, title: "ಸನ್ಮಾನ ಕಾರ್ಯಕ್ರಮ" },
     { src: P36, title: "ವಿದ್ಯಾ ಸಿರಿ" },
-    { src: P37, title: "ತೆಂಕ ಎಡಪದವಿನ ನಿವಾಸಿಯಾದ ವಿಜಯಲಕ್ಷ್ಮಿ ಎಂಬವರ 2 ಹೆಣ್ಣು ಮಕ್ಕಳ ವಿದ್ಯಾಭ್ಯಾಸಕ್ಕಾಗಿ ಶ್ರೀಕಲ್ಪವೇದಿಕೆ ವತಿಯಿಂದ ಸಹಾಯ ಹಸ್ತ" },
+    {
+      src: P37,
+      title:
+        "ತೆಂಕ ಎಡಪದವಿನ ನಿವಾಸಿಯಾದ ವಿಜಯಲಕ್ಷ್ಮಿ ಎಂಬವರ 2 ಹೆಣ್ಣು ಮಕ್ಕಳ ವಿದ್ಯಾಭ್ಯಾಸಕ್ಕಾಗಿ ಶ್ರೀ ಶ್ರೀ ಕಲ್ಪವೇದಿಕೆ ವತಿಯಿಂದ ಸಹಾಯ ಹಸ್ತ",
+    },
   ];
 
   const [selectedIndex, setSelectedIndex] = useState<number | null>(null);
 
   const closeModal = useCallback(() => setSelectedIndex(null), []);
-  const showNext = useCallback(() => setSelectedIndex((i) => (i === null ? 0 : (i + 1) % photos.length)), [photos.length]);
-  const showPrev = useCallback(() => setSelectedIndex((i) => (i === null ? 0 : (i - 1 + photos.length) % photos.length)), [photos.length]);
+  const showNext = useCallback(
+    () => setSelectedIndex((i) => (i === null ? 0 : (i + 1) % photos.length)),
+    [photos.length]
+  );
+  const showPrev = useCallback(
+    () =>
+      setSelectedIndex((i) =>
+        i === null ? 0 : (i - 1 + photos.length) % photos.length
+      ),
+    [photos.length]
+  );
 
   useEffect(() => {
     const handleKey = (e: KeyboardEvent) => {
@@ -104,7 +134,9 @@ export default function Home() {
 
   return (
     <main className="min-h-screen flex flex-col items-center p-6 bg-gradient-to-b from-white to-[#f3da5a] font-serif">
-      <h1 className="text-3xl font-bold mb-6 text-center text-black mt-4">ಫೋಟೋ & ವಿಡಿಯೋ ಗ್ಯಾಲರಿ</h1>
+      <h1 className="text-3xl font-bold mb-6 text-center text-black mt-4">
+        ಫೋಟೋ & ವಿಡಿಯೋ ಗ್ಯಾಲರಿ
+      </h1>
       {/* Photo Grid */}
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
         {photos.map((photo, index) => (
@@ -180,33 +212,32 @@ export default function Home() {
         </div>
 
         {/* YouTube Video 3 */}
-        
-          <div className="relative rounded-2xl shadow-md w-full h-64 cursor-pointer">
-            <a
-              href="https://youtu.be/5Is7Z5AQAcc?si=wpMkB5chJaajcThQ"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="block w-full h-full"
-            >
-              <img
-                src="https://img.youtube.com/vi/5Is7Z5AQAcc/hqdefault.jpg"
-                alt="YouTube Video 3"
-                className="object-cover w-full h-full rounded-2xl"
-              />
-              {/* Centered YouTube Play Icon */}
-              <div className="absolute inset-0 flex justify-center items-center pointer-events-none">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  className="h-16 w-16 text-white drop-shadow-lg"
-                  fill="currentColor"
-                  viewBox="0 0 24 24"
-                >
-                  <path d="M10 8l6 4-6 4V8z" />
-                </svg>
-              </div>
+
+        <div className="relative rounded-2xl shadow-md w-full h-64 cursor-pointer">
+          <a
+            href="https://youtu.be/5Is7Z5AQAcc?si=wpMkB5chJaajcThQ"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="block w-full h-full"
+          >
+            <img
+              src="https://img.youtube.com/vi/5Is7Z5AQAcc/hqdefault.jpg"
+              alt="YouTube Video 3"
+              className="object-cover w-full h-full rounded-2xl"
+            />
+            {/* Centered YouTube Play Icon */}
+            <div className="absolute inset-0 flex justify-center items-center pointer-events-none">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                className="h-16 w-16 text-white drop-shadow-lg"
+                fill="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path d="M10 8l6 4-6 4V8z" />
+              </svg>
+            </div>
           </a>
         </div>
-
       </div>
 
       {/* Modal (Lightbox) */}
@@ -218,46 +249,46 @@ export default function Home() {
           <div className="relative max-w-5xl w-full flex justify-center items-center p-4">
             {/* Close Button */}
             {/* Close Button */}
-              <button
-                className="absolute top-4 right-4 text-white text-3xl bg-transparent rounded-full p-3 hover:bg-black/20 transition"
-                onClick={(e) => {
-                  e.stopPropagation();
-                  closeModal();
-                }}
-              >
-                <FontAwesomeIcon icon={faTimes} />
-              </button>
+            <button
+              className="absolute top-4 right-4 text-white text-3xl bg-transparent rounded-full p-3 hover:bg-black/20 transition"
+              onClick={(e) => {
+                e.stopPropagation();
+                closeModal();
+              }}
+            >
+              <FontAwesomeIcon icon={faTimes} />
+            </button>
 
-              {/* Prev Button */}
-              <button
-                className="absolute left-4 text-white text-3xl bg-transparent rounded-full p-3 hover:bg-black/20 transition"
-                onClick={(e) => {
-                  e.stopPropagation();
-                  showPrev();
-                }}
-              >
-                <FontAwesomeIcon icon={faArrowLeft} />
-              </button>
+            {/* Prev Button */}
+            <button
+              className="absolute left-4 text-white text-3xl bg-transparent rounded-full p-3 hover:bg-black/20 transition"
+              onClick={(e) => {
+                e.stopPropagation();
+                showPrev();
+              }}
+            >
+              <FontAwesomeIcon icon={faArrowLeft} />
+            </button>
 
-              {/* Image */}
-              <Image
-                src={photos[selectedIndex].src}
-                alt={photos[selectedIndex].title}
-                width={1000}
-                height={700}
-                className="object-contain max-h-[80vh] rounded-lg"
-              />
+            {/* Image */}
+            <Image
+              src={photos[selectedIndex].src}
+              alt={photos[selectedIndex].title}
+              width={1000}
+              height={700}
+              className="object-contain max-h-[80vh] rounded-lg"
+            />
 
-              {/* Next Button */}
-              <button
-                className="absolute right-4 text-white text-3xl bg-transparent rounded-full p-3 hover:bg-black/20 transition"
-                onClick={(e) => {
-                  e.stopPropagation();
-                  showNext();
-                }}
-              >
-                <FontAwesomeIcon icon={faArrowRight} />
-              </button>
+            {/* Next Button */}
+            <button
+              className="absolute right-4 text-white text-3xl bg-transparent rounded-full p-3 hover:bg-black/20 transition"
+              onClick={(e) => {
+                e.stopPropagation();
+                showNext();
+              }}
+            >
+              <FontAwesomeIcon icon={faArrowRight} />
+            </button>
           </div>
         </div>
       )}

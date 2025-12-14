@@ -50,7 +50,7 @@ const footerText: Record<
     designerName: "*",
   },
   kn: {
-    templeName: "ಶ್ರೀ ದೈವರಾಜ ಬಬ್ಬುಸ್ವಾಮಿ ಕಲ್ಪವೇದಿಕೆ",
+    templeName: "ಶ್ರೀ ದೈವರಾಜ ಬಬ್ಬುಸ್ವಾಮಿ  ಶ್ರೀ ಕಲ್ಪವೇದಿಕೆ",
     quickLinks: {
       title: "ಲಿಂಕ್ಸ್",
       links: [
@@ -62,7 +62,7 @@ const footerText: Record<
     },
     addressTitle: "ವಿಳಾಸ",
     address: [
-      "ಶ್ರೀ ದೈವರಾಜ ಬಬ್ಬುಸ್ವಾಮಿ ಕಲ್ಪವೇದಿಕೆ,",
+      "ಶ್ರೀ ದೈವರಾಜ ಬಬ್ಬುಸ್ವಾಮಿ  ಶ್ರೀ ಕಲ್ಪವೇದಿಕೆ,",
       "ಬಲಿಪತೋಟ, ಭಾರತಿನಗರ, ಬಿಜೈ",
       "ಮಂಗಳೂರು, ದ.ಕ.",
       "ಪಿನ್ - 575004",
@@ -70,7 +70,7 @@ const footerText: Record<
     contactNumbers: "7349753102, 9945034337",
     email: "balipathota2020@gmail.com",
     rightsReserved:
-      "ಶ್ರೀ ದೈವರಾಜ ಬಬ್ಬುಸ್ವಾಮಿ ಕಲ್ಪವೇದಿಕೆ, ಬಲಿಪತೋಟ ಎಲ್ಲಾ ಹಕ್ಕುಗಳನ್ನು ಕಾಯ್ದಿರಿಸಲಾಗಿದೆ",
+      "ಶ್ರೀ ದೈವರಾಜ ಬಬ್ಬುಸ್ವಾಮಿ  ಶ್ರೀ ಕಲ್ಪವೇದಿಕೆ, ಬಲಿಪತೋಟ ಎಲ್ಲಾ ಹಕ್ಕುಗಳನ್ನು ಕಾಯ್ದಿರಿಸಲಾಗಿದೆ",
     designedBy: "ಹೋಸ್ಟಿಂಗ್ ಮತ್ತು ನಿರ್ವಹಣೆ:",
     designerName: "Pallavi P V ",
   },
@@ -102,24 +102,23 @@ const Footer: React.FC = () => {
 
             {/* Social Media Icons */}
             <div className="flex space-x-8 mt-6">
-                <a
-                  href="https://www.youtube.com/@ravichandra5378"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  aria-label="YouTube"
-                  className="text-white hover:text-red-500 transition-colors duration-200"
+              <a
+                href="https://www.youtube.com/@ravichandra5378"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="YouTube"
+                className="text-white hover:text-red-500 transition-colors duration-200"
+              >
+                <svg
+                  className="w-6 h-6"
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 576 512"
+                  fill="currentColor"
                 >
-                  <svg
-                    className="w-6 h-6"
-                    xmlns="http://www.w3.org/2000/svg"
-                    viewBox="0 0 576 512"
-                    fill="currentColor"
-                  >
-                    <path d="M549.655 124.083c-6.281-23.725-24.84-42.369-48.465-48.693C456.556 64 288 64 288 64s-168.556 0-213.19 11.39c-23.625 6.324-42.184 24.968-48.465 48.693C16 168.718 16 256 16 256s0 87.282 10.345 131.917c6.281 23.725 24.84 42.369 48.465 48.693C119.444 448 288 448 288 448s168.556 0 213.19-11.39c23.625-6.324 42.184-24.968 48.465-48.693C560 343.282 560 256 560 256s0-87.282-10.345-131.917zM232 338.5v-165l142 82.5-142 82.5z"/>
-                  </svg>
-                </a>
-              </div>
-
+                  <path d="M549.655 124.083c-6.281-23.725-24.84-42.369-48.465-48.693C456.556 64 288 64 288 64s-168.556 0-213.19 11.39c-23.625 6.324-42.184 24.968-48.465 48.693C16 168.718 16 256 16 256s0 87.282 10.345 131.917c6.281 23.725 24.84 42.369 48.465 48.693C119.444 448 288 448 288 448s168.556 0 213.19-11.39c23.625-6.324 42.184-24.968 48.465-48.693C560 343.282 560 256 560 256s0-87.282-10.345-131.917zM232 338.5v-165l142 82.5-142 82.5z" />
+                </svg>
+              </a>
+            </div>
           </div>
 
           {/* Quick Links Section with Icon */}
@@ -180,9 +179,8 @@ const Footer: React.FC = () => {
                   xmlns="http://www.w3.org/2000/svg"
                 >
                   <path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 2l-8 5-8-5V6l8 5 8-5v2zM4 18v-8l8 5 8-5v8H4z" />
-                
-                   </svg>
-                 <p className="mt-0.5">{text.email}</p>
+                </svg>
+                <p className="mt-0.5">{text.email}</p>
               </div>
             </address>
           </div>
@@ -204,10 +202,7 @@ const Footer: React.FC = () => {
 
       {/* Footer Bottom Section */}
       <div className="bg-black text-white py-2 text-center site-footer-bottom mx-0 mb-0">
-        <p>
-          © 2025 | Disclaimer{" "}
-          | {text.rightsReserved}
-        </p>
+        <p>© 2025 | Disclaimer | {text.rightsReserved}</p>
         <p>
           {text.designedBy}{" "}
           <Link
